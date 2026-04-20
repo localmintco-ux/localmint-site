@@ -193,7 +193,7 @@ nav .container{display:flex;justify-content:space-between;align-items:center}
 .cta-section h2{font-size:clamp(32px,5vw,48px);font-weight:900;line-height:1.1;color:#fff;margin-bottom:12px;position:relative}
 .cta-section>.container>p{font-size:17px;color:rgba(255,255,255,.7);max-width:500px;margin:0 auto 32px;position:relative}
 .calendly-wrap{position:relative;max-width:700px;margin:0 auto;border-radius:16px;overflow:hidden;box-shadow:0 20px 60px rgba(0,0,0,.3);background:#fff}
-.calendly-wrap iframe{width:100%;height:660px;border:none}
+.calendly-wrap iframe{width:100%;height:900px;border:none}
 
 /* FOOTER */
 footer{padding:40px 0;border-top:1px solid var(--border);text-align:center;transition:border-color .4s}
@@ -206,7 +206,7 @@ footer p{font-size:13px;color:var(--text-muted)} footer .logo-foot{font-size:18p
   .menu-mock{max-width:100%} .tp-bar{grid-template-columns:1fr;border-radius:12px} .tp-bar-item{border-right:none;border-bottom:1px solid var(--border)} .tp-bar-item:last-child{border-bottom:none} .server-layout{grid-template-columns:1fr;gap:40px}
   .hero{padding:130px 0 80px} .hero-ctas{flex-direction:column}
   .btn-primary,.btn-secondary{text-align:center;justify-content:center}
-  .nav-links{display:none} .calendly-wrap iframe{height:750px}
+  .nav-links{display:none} .calendly-wrap iframe{height:950px}
   .result-grid{grid-template-columns:1fr} .result-card.wide{grid-column:span 1}
   .calc-inputs-grid{grid-template-columns:1fr}
 }
@@ -449,7 +449,7 @@ footer p{font-size:13px;color:var(--text-muted)} footer .logo-foot{font-size:18p
 <section class="cta-section" id="book">
   <div class="container">
     <h2 class="fade-up">Ready to add recurring revenue to your restaurant?</h2>
-    <p class="fade-up-d1">Book a free 30-minute call. We'll walk through your numbers and show you exactly what a VIP membership program would look like for your restaurant.</p>
+    <p class="fade-up-d1">Book a free 15-minute call. We'll walk through your numbers and show you exactly what a VIP membership program would look like for your restaurant.</p>
     <div class="calendly-wrap fade-up-d2">
       <iframe src="https://calendly.com/localmintco/30min?hide_gdpr_banner=1" loading="lazy"></iframe>
     </div>
@@ -568,6 +568,10 @@ function calc(){
     <div class="ar-profit"><div class="ar-label">Annual Profit Impact</div><div class="ar-value">${fmtK(netNewProfit*12)}</div></div>
     <div style="text-align:right;font-size:9px;color:var(--text-muted);margin-top:8px;font-style:italic">* after all LocalMint platform fees</div>`;
 }
+calc();
+</script>
+</body>
+</html>
 calc();
 </script>
 </body>
