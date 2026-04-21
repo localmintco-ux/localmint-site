@@ -6,7 +6,7 @@
 <title>LocalMint — Subscription Revenue for Your Restaurant</title>
 <link rel="icon" href="/favicon.ico" sizes="any">
 <link rel="apple-touch-icon" href="/apple-touch-icon.png">
-<link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Outfit:wght@300;400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500;600;700&display=swap" rel="stylesheet">
 <style>
 *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
 :root { --brand:#1B6B4A; --brand-light:#2E8B57; --brand-glow:#34D399; --brand-mint:#6EE7B7; --grad-start:#34D399; --grad-end:#059669; }
@@ -45,29 +45,39 @@ nav .container{display:flex;justify-content:space-between;align-items:center}
 .hero h1 em{font-style:normal;background:linear-gradient(135deg,var(--grad-start),var(--grad-end));-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text}
 .hero-sub{font-size:17px;line-height:1.65;color:var(--text-sub);margin-bottom:40px}
 .hero-ctas{display:flex;gap:16px;flex-wrap:wrap}
-.hero-menu{position:relative;transform:perspective(1200px) rotateY(-6deg) rotateX(2deg);transform-style:preserve-3d}
-.hero-menu-card{background:#FDFBF7;border-radius:6px;padding:28px 24px;box-shadow:0 8px 30px rgba(0,0,0,.2),0 30px 60px rgba(0,0,0,.15);font-family:'JetBrains Mono',monospace;font-size:11px;color:#2a2a2a;line-height:1.7;position:relative}
-.hero-menu-card::before{content:'';position:absolute;top:0;left:0;right:0;bottom:0;background:repeating-linear-gradient(0deg,transparent,transparent 2px,rgba(0,0,0,.006) 2px,rgba(0,0,0,.006) 4px);pointer-events:none;border-radius:6px}
-.hm-title{font-family:'Outfit',sans-serif;font-size:18px;font-weight:700;text-align:center;color:#1a1a1a;letter-spacing:.06em;text-transform:uppercase;margin-bottom:2px}
-.hm-sub{font-family:'Outfit',sans-serif;font-size:9px;color:#8B7E6A;text-align:center;letter-spacing:.1em;margin-bottom:12px}
-.hm-legend{display:flex;justify-content:center;gap:16px;margin-bottom:14px;padding:6px 12px;background:rgba(27,107,74,.05);border-radius:6px;border:1px solid rgba(27,107,74,.1)}
-.hm-leg{display:flex;align-items:center;gap:5px;font-family:'Outfit',sans-serif;font-size:9px;font-weight:600;letter-spacing:.04em;text-transform:uppercase}
+.hero-menu{position:relative}
+.hero-menu-card{
+  background:#FDFBF7;border-radius:4px;padding:28px 30px;
+  box-shadow:0 2px 4px rgba(0,0,0,.06),0 8px 20px rgba(0,0,0,.08),0 30px 60px rgba(0,0,0,.12),0 60px 120px rgba(0,0,0,.08);
+  position:relative;
+}
+.hero-menu-card::before{content:'';position:absolute;top:0;left:0;right:0;bottom:0;background:repeating-linear-gradient(0deg,transparent,transparent 2px,rgba(0,0,0,.008) 2px,rgba(0,0,0,.008) 4px),repeating-linear-gradient(90deg,transparent,transparent 2px,rgba(0,0,0,.005) 2px,rgba(0,0,0,.005) 4px);pointer-events:none;border-radius:4px}
+.hero-menu-card::after{content:'';position:absolute;top:12px;bottom:12px;left:50%;width:1px;background:linear-gradient(180deg,transparent,rgba(0,0,0,.06) 20%,rgba(0,0,0,.06) 80%,transparent)}
+.hm-header{text-align:center;margin-bottom:16px;padding-bottom:12px;border-bottom:1px solid #E8E2D8;position:relative}
+.hm-header::after{content:'';position:absolute;bottom:-1px;left:50%;transform:translateX(-50%);width:40px;height:2px;background:#1B6B4A;border-radius:2px}
+.hm-title{font-family:'Cormorant Garamond',serif;font-size:24px;font-weight:600;color:#1a1a1a;letter-spacing:.08em;text-transform:uppercase;margin-bottom:2px}
+.hm-sub{font-family:'Cormorant Garamond',serif;font-size:10px;font-weight:400;font-style:italic;color:#8B7E6A;letter-spacing:.12em}
+.hm-legend{display:flex;align-items:center;justify-content:center;gap:16px;margin-bottom:16px;padding:6px 14px;background:linear-gradient(135deg,rgba(27,107,74,.06),rgba(27,107,74,.02));border:1px solid rgba(27,107,74,.12);border-radius:6px}
+.hm-leg{display:flex;align-items:center;gap:5px;font-size:8px;font-weight:600;letter-spacing:.06em;text-transform:uppercase;font-family:'Outfit',sans-serif}
 .hm-dot{width:6px;height:6px;border-radius:50%}
 .hm-dot.reg{background:#B8AFA2}
 .hm-dot.vip{background:#1B6B4A}
-.hm-cat{font-family:'Outfit',sans-serif;font-size:10px;font-weight:700;color:#1a1a1a;letter-spacing:.08em;text-transform:uppercase;border-bottom:1px solid #E8E2D8;padding-bottom:3px;margin:10px 0 6px}
+.hm-cols{display:grid;grid-template-columns:1fr 1fr;gap:6px 28px}
+.hm-cat{font-family:'Cormorant Garamond',serif;font-size:13px;font-weight:600;color:#1a1a1a;letter-spacing:.08em;text-transform:uppercase;padding-bottom:3px;border-bottom:1px solid #E8E2D8;margin:12px 0 6px}
 .hm-cat:first-child{margin-top:0}
-.hm-row{display:flex;justify-content:space-between;align-items:baseline;padding:2px 0}
-.hm-name{font-family:'Outfit',sans-serif;font-size:11px;font-weight:500;color:#2a2a2a}
-.hm-prices{display:flex;gap:8px}
-.hm-reg{color:#B8AFA2;text-decoration:line-through;font-size:10px}
-.hm-vip{color:#1B6B4A;font-weight:700;font-size:11px}
-.hm-cols{display:grid;grid-template-columns:1fr 1fr;gap:4px 24px}
-.hm-footer{margin-top:12px;padding-top:10px;border-top:1px solid #E8E2D8;display:flex;align-items:center;justify-content:center;gap:12px}
-.hm-footer-text{font-family:'Outfit',sans-serif;font-size:11px;font-weight:600;color:#1B6B4A}
+.hm-item{margin-bottom:6px}
+.hm-row{display:flex;justify-content:space-between;align-items:baseline}
+.hm-name{font-family:'Cormorant Garamond',serif;font-size:12px;font-weight:600;color:#2a2a2a}
+.hm-desc{font-size:8px;color:#9B9080;line-height:1.3;margin-top:1px;font-family:'Outfit',sans-serif}
+.hm-prices{display:flex;gap:6px;flex-shrink:0}
+.hm-reg{color:#B8AFA2;text-decoration:line-through;font-size:9px;font-family:'JetBrains Mono',monospace}
+.hm-vip{color:#1B6B4A;font-weight:700;font-size:10px;font-family:'JetBrains Mono',monospace}
+.hm-dots{flex:1;border-bottom:1px dotted #D8D0C4;margin:0 6px;min-width:10px;align-self:baseline;margin-bottom:3px}
+.hm-footer{margin-top:14px;padding-top:10px;border-top:1px solid #E8E2D8;display:flex;align-items:center;justify-content:center;gap:12px}
+.hm-footer-text{font-family:'Cormorant Garamond',serif;font-size:13px;font-weight:600;color:#1B6B4A}
 .hm-footer-sub{font-family:'Outfit',sans-serif;font-size:8px;color:#8B7E6A}
-.hm-qr{width:36px;height:36px;background:#1B6B4A;border-radius:4px;display:flex;align-items:center;justify-content:center}
-.hm-qr svg{width:30px;height:30px}
+.hm-qr{width:32px;height:32px;background:#1B6B4A;border-radius:4px;display:flex;align-items:center;justify-content:center}
+.hm-qr svg{width:26px;height:26px}
 .btn-primary{background:var(--brand);color:#fff;padding:16px 36px;border-radius:10px;text-decoration:none;font-weight:700;font-size:16px;transition:all .3s;border:2px solid var(--brand);display:inline-flex;align-items:center;gap:8px}
 .btn-primary:hover{background:var(--brand-light);transform:translateY(-2px);box-shadow:0 8px 30px rgba(27,107,74,.3)}
 .btn-secondary{background:transparent;color:var(--text);padding:16px 36px;border-radius:10px;text-decoration:none;font-weight:600;font-size:16px;border:2px solid var(--border);transition:all .3s}
@@ -273,40 +283,45 @@ footer p{font-size:13px;color:var(--text-muted)} footer .logo-foot{font-size:18p
       </div>
       <div class="hero-menu fade-up-d4">
         <div class="hero-menu-card">
-          <div class="hm-title">Mario's Bistro</div>
-          <div class="hm-sub">Fine Italian Dining · Long Island, NY</div>
+          <div class="hm-header">
+            <div class="hm-title">Mario's Bistro</div>
+            <div class="hm-sub">Fine Italian Dining &middot; Est. 2019 &middot; Long Island, NY</div>
+          </div>
           <div class="hm-legend">
-            <div class="hm-leg"><div class="hm-dot reg"></div><span style="color:#8B7E6A">Regular</span></div>
-            <div class="hm-leg"><div class="hm-dot vip"></div><span style="color:#1B6B4A">VIP Member</span></div>
+            <div class="hm-leg"><div class="hm-dot reg"></div><span style="color:#8B7E6A">Regular Price</span></div>
+            <div class="hm-leg"><div class="hm-dot vip"></div><span style="color:#1B6B4A">VIP Member Price</span></div>
           </div>
           <div class="hm-cols">
             <div>
               <div class="hm-cat">Antipasti</div>
-              <div class="hm-row"><span class="hm-name">Bruschetta</span><div class="hm-prices"><span class="hm-reg">$16</span><span class="hm-vip">$10</span></div></div>
-              <div class="hm-row"><span class="hm-name">Calamari Fritti</span><div class="hm-prices"><span class="hm-reg">$18</span><span class="hm-vip">$12</span></div></div>
-              <div class="hm-row"><span class="hm-name">Burrata & Prosciutto</span><div class="hm-prices"><span class="hm-reg">$22</span><span class="hm-vip">$14</span></div></div>
-              <div class="hm-cat">Entrées</div>
-              <div class="hm-row"><span class="hm-name">Penne Arrabbiata</span><div class="hm-prices"><span class="hm-reg">$24</span><span class="hm-vip">$16</span></div></div>
-              <div class="hm-row"><span class="hm-name">Grilled Branzino</span><div class="hm-prices"><span class="hm-reg">$38</span><span class="hm-vip">$25</span></div></div>
-              <div class="hm-row"><span class="hm-name">Veal Osso Buco</span><div class="hm-prices"><span class="hm-reg">$42</span><span class="hm-vip">$27</span></div></div>
-              <div class="hm-row"><span class="hm-name">Chicken Parm</span><div class="hm-prices"><span class="hm-reg">$28</span><span class="hm-vip">$18</span></div></div>
+              <div class="hm-item"><div class="hm-row"><span class="hm-name">Bruschetta Classica</span><div class="hm-dots"></div><div class="hm-prices"><span class="hm-reg">$16</span><span class="hm-vip">$10</span></div></div><div class="hm-desc">Heirloom tomatoes, fresh basil, aged balsamic</div></div>
+              <div class="hm-item"><div class="hm-row"><span class="hm-name">Calamari Fritti</span><div class="hm-dots"></div><div class="hm-prices"><span class="hm-reg">$18</span><span class="hm-vip">$12</span></div></div><div class="hm-desc">Lightly fried, cherry pepper aioli</div></div>
+              <div class="hm-item"><div class="hm-row"><span class="hm-name">Burrata &amp; Prosciutto</span><div class="hm-dots"></div><div class="hm-prices"><span class="hm-reg">$22</span><span class="hm-vip">$14</span></div></div><div class="hm-desc">San Daniele prosciutto, arugula, truffle honey</div></div>
+              <div class="hm-cat">Entr&eacute;es</div>
+              <div class="hm-item"><div class="hm-row"><span class="hm-name">Penne Arrabbiata</span><div class="hm-dots"></div><div class="hm-prices"><span class="hm-reg">$24</span><span class="hm-vip">$16</span></div></div><div class="hm-desc">San Marzano tomato, calabrian chili, pecorino</div></div>
+              <div class="hm-item"><div class="hm-row"><span class="hm-name">Grilled Branzino</span><div class="hm-dots"></div><div class="hm-prices"><span class="hm-reg">$38</span><span class="hm-vip">$25</span></div></div><div class="hm-desc">Mediterranean sea bass, lemon caper butter</div></div>
+              <div class="hm-item"><div class="hm-row"><span class="hm-name">Veal Osso Buco</span><div class="hm-dots"></div><div class="hm-prices"><span class="hm-reg">$42</span><span class="hm-vip">$27</span></div></div><div class="hm-desc">Slow-braised shank, saffron risotto, gremolata</div></div>
+              <div class="hm-item"><div class="hm-row"><span class="hm-name">Chicken Parmigiana</span><div class="hm-dots"></div><div class="hm-prices"><span class="hm-reg">$28</span><span class="hm-vip">$18</span></div></div><div class="hm-desc">Hand-breaded, house marinara, fresh mozzarella</div></div>
+              <div class="hm-item"><div class="hm-row"><span class="hm-name">Lobster Ravioli</span><div class="hm-dots"></div><div class="hm-prices"><span class="hm-reg">$36</span><span class="hm-vip">$23</span></div></div><div class="hm-desc">Butter-poached lobster, sage brown butter</div></div>
             </div>
             <div>
               <div class="hm-cat">Pasta</div>
-              <div class="hm-row"><span class="hm-name">Cacio e Pepe</span><div class="hm-prices"><span class="hm-reg">$22</span><span class="hm-vip">$14</span></div></div>
-              <div class="hm-row"><span class="hm-name">Linguine Vongole</span><div class="hm-prices"><span class="hm-reg">$30</span><span class="hm-vip">$20</span></div></div>
-              <div class="hm-row"><span class="hm-name">Rigatoni Bolognese</span><div class="hm-prices"><span class="hm-reg">$26</span><span class="hm-vip">$17</span></div></div>
-              <div class="hm-cat">Sides</div>
-              <div class="hm-row"><span class="hm-name">Caesar Salad</span><div class="hm-prices"><span class="hm-reg">$14</span><span class="hm-vip">$9</span></div></div>
-              <div class="hm-row"><span class="hm-name">Truffle Fries</span><div class="hm-prices"><span class="hm-reg">$12</span><span class="hm-vip">$8</span></div></div>
+              <div class="hm-item"><div class="hm-row"><span class="hm-name">Cacio e Pepe</span><div class="hm-dots"></div><div class="hm-prices"><span class="hm-reg">$22</span><span class="hm-vip">$14</span></div></div><div class="hm-desc">Tonnarelli, pecorino romano, black pepper</div></div>
+              <div class="hm-item"><div class="hm-row"><span class="hm-name">Linguine alle Vongole</span><div class="hm-dots"></div><div class="hm-prices"><span class="hm-reg">$30</span><span class="hm-vip">$20</span></div></div><div class="hm-desc">Little neck clams, white wine, garlic, parsley</div></div>
+              <div class="hm-item"><div class="hm-row"><span class="hm-name">Rigatoni Bolognese</span><div class="hm-dots"></div><div class="hm-prices"><span class="hm-reg">$26</span><span class="hm-vip">$17</span></div></div><div class="hm-desc">Slow-simmered beef &amp; pork rag&ugrave;, parmigiano</div></div>
+              <div class="hm-cat">Sides &amp; Salads</div>
+              <div class="hm-item"><div class="hm-row"><span class="hm-name">Caesar Salad</span><div class="hm-dots"></div><div class="hm-prices"><span class="hm-reg">$14</span><span class="hm-vip">$9</span></div></div><div class="hm-desc">Romaine hearts, white anchovy, croutons</div></div>
+              <div class="hm-item"><div class="hm-row"><span class="hm-name">Truffle Fries</span><div class="hm-dots"></div><div class="hm-prices"><span class="hm-reg">$12</span><span class="hm-vip">$8</span></div></div><div class="hm-desc">Parmigiano, truffle oil, fresh herbs</div></div>
+              <div class="hm-item"><div class="hm-row"><span class="hm-name">Grilled Broccolini</span><div class="hm-dots"></div><div class="hm-prices"><span class="hm-reg">$10</span><span class="hm-vip">$7</span></div></div><div class="hm-desc">Lemon zest, chili flake, olive oil</div></div>
               <div class="hm-cat">Dolci</div>
-              <div class="hm-row"><span class="hm-name">Tiramisu</span><div class="hm-prices"><span class="hm-reg">$14</span><span class="hm-vip">$9</span></div></div>
-              <div class="hm-row"><span class="hm-name">Panna Cotta</span><div class="hm-prices"><span class="hm-reg">$12</span><span class="hm-vip">$8</span></div></div>
+              <div class="hm-item"><div class="hm-row"><span class="hm-name">Tiramisu</span><div class="hm-dots"></div><div class="hm-prices"><span class="hm-reg">$14</span><span class="hm-vip">$9</span></div></div><div class="hm-desc">Espresso-soaked ladyfingers, mascarpone</div></div>
+              <div class="hm-item"><div class="hm-row"><span class="hm-name">Panna Cotta</span><div class="hm-dots"></div><div class="hm-prices"><span class="hm-reg">$12</span><span class="hm-vip">$8</span></div></div><div class="hm-desc">Vanilla bean, seasonal berry compote</div></div>
+              <div class="hm-item"><div class="hm-row"><span class="hm-name">Cannoli</span><div class="hm-dots"></div><div class="hm-prices"><span class="hm-reg">$10</span><span class="hm-vip">$7</span></div></div><div class="hm-desc">Ricotta, chocolate chip, pistachio</div></div>
             </div>
           </div>
           <div class="hm-footer">
-            <div><div class="hm-footer-text">Join VIP — $55/mo</div><div class="hm-footer-sub">Save 35% every visit</div></div>
-            <div class="hm-qr"><svg viewBox="0 0 21 21" xmlns="http://www.w3.org/2000/svg"><rect width="21" height="21" fill="#1B6B4A"/><g fill="#fff"><rect x="1" y="1" width="1" height="1"/><rect x="2" y="1" width="1" height="1"/><rect x="3" y="1" width="1" height="1"/><rect x="4" y="1" width="1" height="1"/><rect x="5" y="1" width="1" height="1"/><rect x="6" y="1" width="1" height="1"/><rect x="7" y="1" width="1" height="1"/><rect x="1" y="2" width="1" height="1"/><rect x="7" y="2" width="1" height="1"/><rect x="9" y="1" width="1" height="1"/><rect x="11" y="1" width="1" height="1"/><rect x="13" y="1" width="1" height="1"/><rect x="14" y="1" width="1" height="1"/><rect x="15" y="1" width="1" height="1"/><rect x="16" y="1" width="1" height="1"/><rect x="17" y="1" width="1" height="1"/><rect x="18" y="1" width="1" height="1"/><rect x="19" y="1" width="1" height="1"/><rect x="1" y="3" width="1" height="1"/><rect x="3" y="3" width="1" height="1"/><rect x="4" y="3" width="1" height="1"/><rect x="5" y="3" width="1" height="1"/><rect x="7" y="3" width="1" height="1"/><rect x="13" y="2" width="1" height="1"/><rect x="19" y="2" width="1" height="1"/><rect x="1" y="4" width="1" height="1"/><rect x="3" y="4" width="1" height="1"/><rect x="4" y="4" width="1" height="1"/><rect x="5" y="4" width="1" height="1"/><rect x="7" y="4" width="1" height="1"/><rect x="1" y="5" width="1" height="1"/><rect x="3" y="5" width="1" height="1"/><rect x="4" y="5" width="1" height="1"/><rect x="5" y="5" width="1" height="1"/><rect x="7" y="5" width="1" height="1"/><rect x="1" y="6" width="1" height="1"/><rect x="7" y="6" width="1" height="1"/><rect x="1" y="7" width="1" height="1"/><rect x="2" y="7" width="1" height="1"/><rect x="3" y="7" width="1" height="1"/><rect x="4" y="7" width="1" height="1"/><rect x="5" y="7" width="1" height="1"/><rect x="6" y="7" width="1" height="1"/><rect x="7" y="7" width="1" height="1"/><rect x="9" y="7" width="1" height="1"/><rect x="11" y="7" width="1" height="1"/><rect x="13" y="7" width="1" height="1"/><rect x="15" y="7" width="1" height="1"/><rect x="17" y="7" width="1" height="1"/><rect x="19" y="7" width="1" height="1"/><rect x="1" y="13" width="1" height="1"/><rect x="2" y="13" width="1" height="1"/><rect x="3" y="13" width="1" height="1"/><rect x="4" y="13" width="1" height="1"/><rect x="5" y="13" width="1" height="1"/><rect x="6" y="13" width="1" height="1"/><rect x="7" y="13" width="1" height="1"/><rect x="9" y="13" width="1" height="1"/><rect x="11" y="13" width="1" height="1"/><rect x="14" y="13" width="1" height="1"/><rect x="16" y="13" width="1" height="1"/><rect x="18" y="13" width="1" height="1"/><rect x="1" y="14" width="1" height="1"/><rect x="7" y="14" width="1" height="1"/><rect x="1" y="15" width="1" height="1"/><rect x="3" y="15" width="1" height="1"/><rect x="4" y="15" width="1" height="1"/><rect x="5" y="15" width="1" height="1"/><rect x="7" y="15" width="1" height="1"/><rect x="1" y="16" width="1" height="1"/><rect x="3" y="16" width="1" height="1"/><rect x="4" y="16" width="1" height="1"/><rect x="5" y="16" width="1" height="1"/><rect x="7" y="16" width="1" height="1"/><rect x="1" y="17" width="1" height="1"/><rect x="3" y="17" width="1" height="1"/><rect x="4" y="17" width="1" height="1"/><rect x="5" y="17" width="1" height="1"/><rect x="7" y="17" width="1" height="1"/><rect x="1" y="18" width="1" height="1"/><rect x="7" y="18" width="1" height="1"/><rect x="1" y="19" width="1" height="1"/><rect x="2" y="19" width="1" height="1"/><rect x="3" y="19" width="1" height="1"/><rect x="4" y="19" width="1" height="1"/><rect x="5" y="19" width="1" height="1"/><rect x="6" y="19" width="1" height="1"/><rect x="7" y="19" width="1" height="1"/><rect x="9" y="19" width="1" height="1"/><rect x="11" y="19" width="1" height="1"/><rect x="13" y="19" width="1" height="1"/><rect x="15" y="19" width="1" height="1"/><rect x="18" y="19" width="1" height="1"/></g></svg></div>
+            <div style="text-align:right"><div class="hm-footer-text">Join VIP &mdash; $55/mo</div><div class="hm-footer-sub">Save 35% on every visit. Scan to join instantly.</div></div>
+            <div class="hm-qr"><svg viewBox="0 0 21 21" xmlns="http://www.w3.org/2000/svg"><rect width="21" height="21" fill="#1B6B4A"/><g fill="#fff"><rect x="1" y="1" width="7" height="1"/><rect x="1" y="2" width="1" height="1"/><rect x="7" y="2" width="1" height="1"/><rect x="1" y="3" width="1" height="1"/><rect x="3" y="3" width="3" height="1"/><rect x="7" y="3" width="1" height="1"/><rect x="1" y="4" width="1" height="1"/><rect x="3" y="4" width="3" height="1"/><rect x="7" y="4" width="1" height="1"/><rect x="1" y="5" width="1" height="1"/><rect x="3" y="5" width="3" height="1"/><rect x="7" y="5" width="1" height="1"/><rect x="1" y="6" width="1" height="1"/><rect x="7" y="6" width="1" height="1"/><rect x="1" y="7" width="7" height="1"/><rect x="9" y="7" width="1" height="1"/><rect x="11" y="7" width="1" height="1"/><rect x="13" y="1" width="7" height="1"/><rect x="13" y="2" width="1" height="1"/><rect x="19" y="2" width="1" height="1"/><rect x="13" y="3" width="1" height="1"/><rect x="15" y="3" width="3" height="1"/><rect x="19" y="3" width="1" height="1"/><rect x="13" y="4" width="1" height="1"/><rect x="15" y="4" width="3" height="1"/><rect x="19" y="4" width="1" height="1"/><rect x="13" y="5" width="1" height="1"/><rect x="15" y="5" width="3" height="1"/><rect x="19" y="5" width="1" height="1"/><rect x="13" y="6" width="1" height="1"/><rect x="19" y="6" width="1" height="1"/><rect x="13" y="7" width="7" height="1"/><rect x="1" y="13" width="7" height="1"/><rect x="1" y="14" width="1" height="1"/><rect x="7" y="14" width="1" height="1"/><rect x="1" y="15" width="1" height="1"/><rect x="3" y="15" width="3" height="1"/><rect x="7" y="15" width="1" height="1"/><rect x="1" y="16" width="1" height="1"/><rect x="3" y="16" width="3" height="1"/><rect x="7" y="16" width="1" height="1"/><rect x="1" y="17" width="1" height="1"/><rect x="3" y="17" width="3" height="1"/><rect x="7" y="17" width="1" height="1"/><rect x="1" y="18" width="1" height="1"/><rect x="7" y="18" width="1" height="1"/><rect x="1" y="19" width="7" height="1"/><rect x="9" y="9" width="1" height="1"/><rect x="10" y="10" width="1" height="1"/><rect x="9" y="11" width="1" height="1"/><rect x="11" y="9" width="1" height="1"/><rect x="11" y="11" width="1" height="1"/><rect x="9" y="13" width="1" height="1"/><rect x="11" y="13" width="1" height="1"/><rect x="9" y="15" width="1" height="1"/><rect x="11" y="15" width="1" height="1"/><rect x="9" y="17" width="1" height="1"/><rect x="11" y="17" width="1" height="1"/><rect x="9" y="19" width="1" height="1"/><rect x="11" y="19" width="1" height="1"/><rect x="13" y="9" width="1" height="1"/><rect x="15" y="9" width="1" height="1"/><rect x="17" y="9" width="1" height="1"/><rect x="19" y="9" width="1" height="1"/><rect x="14" y="10" width="1" height="1"/><rect x="16" y="10" width="1" height="1"/><rect x="18" y="10" width="1" height="1"/><rect x="13" y="11" width="1" height="1"/><rect x="15" y="11" width="1" height="1"/><rect x="19" y="11" width="1" height="1"/><rect x="14" y="12" width="1" height="1"/><rect x="17" y="12" width="1" height="1"/><rect x="13" y="13" width="1" height="1"/><rect x="16" y="13" width="1" height="1"/><rect x="18" y="13" width="1" height="1"/><rect x="15" y="14" width="1" height="1"/><rect x="17" y="14" width="1" height="1"/><rect x="19" y="14" width="1" height="1"/><rect x="13" y="15" width="1" height="1"/><rect x="16" y="15" width="1" height="1"/><rect x="14" y="16" width="1" height="1"/><rect x="18" y="16" width="1" height="1"/><rect x="13" y="17" width="1" height="1"/><rect x="15" y="17" width="1" height="1"/><rect x="19" y="17" width="1" height="1"/><rect x="16" y="18" width="1" height="1"/><rect x="18" y="18" width="1" height="1"/><rect x="13" y="19" width="1" height="1"/><rect x="15" y="19" width="1" height="1"/><rect x="17" y="19" width="1" height="1"/></g></svg></div>
           </div>
         </div>
       </div>
