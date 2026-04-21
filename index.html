@@ -39,11 +39,35 @@ nav .container{display:flex;justify-content:space-between;align-items:center}
 /* HERO */
 .hero{padding:150px 0 110px;position:relative;overflow:hidden}
 .hero::before{content:'';position:absolute;top:-200px;right:-200px;width:600px;height:600px;background:radial-gradient(circle,rgba(27,107,74,.15) 0%,transparent 70%);animation:pulse 6s ease-in-out infinite}
+.hero-layout{display:grid;grid-template-columns:1fr 1fr;gap:40px;align-items:center}
 .hero-badge{display:inline-block;padding:6px 16px;border-radius:100px;background:var(--icon-bg);border:1px solid rgba(46,139,87,.25);font-size:13px;font-weight:500;color:var(--brand-glow);letter-spacing:.04em;margin-bottom:24px}
-.hero h1{font-size:clamp(38px,6vw,64px);font-weight:900;line-height:1.05;letter-spacing:-.03em;max-width:800px;margin-bottom:24px}
+.hero h1{font-size:clamp(34px,5vw,56px);font-weight:900;line-height:1.05;letter-spacing:-.03em;margin-bottom:24px}
 .hero h1 em{font-style:normal;background:linear-gradient(135deg,var(--grad-start),var(--grad-end));-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text}
-.hero-sub{font-size:19px;line-height:1.65;color:var(--text-sub);max-width:560px;margin-bottom:40px}
+.hero-sub{font-size:17px;line-height:1.65;color:var(--text-sub);margin-bottom:40px}
 .hero-ctas{display:flex;gap:16px;flex-wrap:wrap}
+.hero-menu{position:relative;transform:perspective(1200px) rotateY(-6deg) rotateX(2deg);transform-style:preserve-3d}
+.hero-menu-card{background:#FDFBF7;border-radius:6px;padding:28px 24px;box-shadow:0 8px 30px rgba(0,0,0,.2),0 30px 60px rgba(0,0,0,.15);font-family:'JetBrains Mono',monospace;font-size:11px;color:#2a2a2a;line-height:1.7;position:relative}
+.hero-menu-card::before{content:'';position:absolute;top:0;left:0;right:0;bottom:0;background:repeating-linear-gradient(0deg,transparent,transparent 2px,rgba(0,0,0,.006) 2px,rgba(0,0,0,.006) 4px);pointer-events:none;border-radius:6px}
+.hm-title{font-family:'Outfit',sans-serif;font-size:18px;font-weight:700;text-align:center;color:#1a1a1a;letter-spacing:.06em;text-transform:uppercase;margin-bottom:2px}
+.hm-sub{font-family:'Outfit',sans-serif;font-size:9px;color:#8B7E6A;text-align:center;letter-spacing:.1em;margin-bottom:12px}
+.hm-legend{display:flex;justify-content:center;gap:16px;margin-bottom:14px;padding:6px 12px;background:rgba(27,107,74,.05);border-radius:6px;border:1px solid rgba(27,107,74,.1)}
+.hm-leg{display:flex;align-items:center;gap:5px;font-family:'Outfit',sans-serif;font-size:9px;font-weight:600;letter-spacing:.04em;text-transform:uppercase}
+.hm-dot{width:6px;height:6px;border-radius:50%}
+.hm-dot.reg{background:#B8AFA2}
+.hm-dot.vip{background:#1B6B4A}
+.hm-cat{font-family:'Outfit',sans-serif;font-size:10px;font-weight:700;color:#1a1a1a;letter-spacing:.08em;text-transform:uppercase;border-bottom:1px solid #E8E2D8;padding-bottom:3px;margin:10px 0 6px}
+.hm-cat:first-child{margin-top:0}
+.hm-row{display:flex;justify-content:space-between;align-items:baseline;padding:2px 0}
+.hm-name{font-family:'Outfit',sans-serif;font-size:11px;font-weight:500;color:#2a2a2a}
+.hm-prices{display:flex;gap:8px}
+.hm-reg{color:#B8AFA2;text-decoration:line-through;font-size:10px}
+.hm-vip{color:#1B6B4A;font-weight:700;font-size:11px}
+.hm-cols{display:grid;grid-template-columns:1fr 1fr;gap:4px 24px}
+.hm-footer{margin-top:12px;padding-top:10px;border-top:1px solid #E8E2D8;display:flex;align-items:center;justify-content:center;gap:12px}
+.hm-footer-text{font-family:'Outfit',sans-serif;font-size:11px;font-weight:600;color:#1B6B4A}
+.hm-footer-sub{font-family:'Outfit',sans-serif;font-size:8px;color:#8B7E6A}
+.hm-qr{width:36px;height:36px;background:#1B6B4A;border-radius:4px;display:flex;align-items:center;justify-content:center}
+.hm-qr svg{width:30px;height:30px}
 .btn-primary{background:var(--brand);color:#fff;padding:16px 36px;border-radius:10px;text-decoration:none;font-weight:700;font-size:16px;transition:all .3s;border:2px solid var(--brand);display:inline-flex;align-items:center;gap:8px}
 .btn-primary:hover{background:var(--brand-light);transform:translateY(-2px);box-shadow:0 8px 30px rgba(27,107,74,.3)}
 .btn-secondary{background:transparent;color:var(--text);padding:16px 36px;border-radius:10px;text-decoration:none;font-weight:600;font-size:16px;border:2px solid var(--border);transition:all .3s}
@@ -204,7 +228,7 @@ footer p{font-size:13px;color:var(--text-muted)} footer .logo-foot{font-size:18p
   .problem-grid,.steps-grid,.revenue-grid,.features-grid,.features-bottom{grid-template-columns:1fr;max-width:100%}
   .step:not(:last-child)::after{display:none} .exposure-layout{grid-template-columns:1fr;gap:32px}
   .menu-mock{max-width:100%} .tp-bar{grid-template-columns:1fr;border-radius:12px} .tp-bar-item{border-right:none;border-bottom:1px solid var(--border)} .tp-bar-item:last-child{border-bottom:none} .server-layout{grid-template-columns:1fr;gap:40px}
-  .hero{padding:130px 0 80px} .hero-ctas{flex-direction:column}
+  .hero{padding:130px 0 80px} .hero-layout{grid-template-columns:1fr} .hero-menu{display:none} .hero-ctas{flex-direction:column}
   .btn-primary,.btn-secondary{text-align:center;justify-content:center}
   .nav-links{display:none} .calendly-wrap iframe{height:950px}
   .result-grid{grid-template-columns:1fr} .result-card.wide{grid-column:span 1}
@@ -237,12 +261,55 @@ footer p{font-size:13px;color:var(--text-muted)} footer .logo-foot{font-size:18p
 
 <section class="hero">
   <div class="container">
-    <div class="hero-badge fade-up">Built for restaurant owners</div>
-    <h1 class="fade-up-d1">Turn your regulars into <em>predictable monthly revenue</em></h1>
-    <p class="hero-sub fade-up-d2">LocalMint adds a VIP membership program to your restaurant — customers subscribe for monthly discounts, and you collect recurring revenue whether they visit or not.</p>
-    <div class="hero-ctas fade-up-d3">
-      <a href="#book" class="btn-primary">Book a Discovery Call →</a>
-      <a href="#how" class="btn-secondary">See How It Works</a>
+    <div class="hero-layout">
+      <div>
+        <div class="hero-badge fade-up">Built for restaurant owners</div>
+        <h1 class="fade-up-d1">Turn your regulars into <em>predictable monthly revenue</em></h1>
+        <p class="hero-sub fade-up-d2">LocalMint adds a VIP membership program to your restaurant — customers subscribe for monthly discounts, and you collect recurring revenue whether they visit or not.</p>
+        <div class="hero-ctas fade-up-d3">
+          <a href="#book" class="btn-primary">Book a Discovery Call →</a>
+          <a href="#how" class="btn-secondary">See How It Works</a>
+        </div>
+      </div>
+      <div class="hero-menu fade-up-d4">
+        <div class="hero-menu-card">
+          <div class="hm-title">Mario's Bistro</div>
+          <div class="hm-sub">Fine Italian Dining · Long Island, NY</div>
+          <div class="hm-legend">
+            <div class="hm-leg"><div class="hm-dot reg"></div><span style="color:#8B7E6A">Regular</span></div>
+            <div class="hm-leg"><div class="hm-dot vip"></div><span style="color:#1B6B4A">VIP Member</span></div>
+          </div>
+          <div class="hm-cols">
+            <div>
+              <div class="hm-cat">Antipasti</div>
+              <div class="hm-row"><span class="hm-name">Bruschetta</span><div class="hm-prices"><span class="hm-reg">$16</span><span class="hm-vip">$10</span></div></div>
+              <div class="hm-row"><span class="hm-name">Calamari Fritti</span><div class="hm-prices"><span class="hm-reg">$18</span><span class="hm-vip">$12</span></div></div>
+              <div class="hm-row"><span class="hm-name">Burrata & Prosciutto</span><div class="hm-prices"><span class="hm-reg">$22</span><span class="hm-vip">$14</span></div></div>
+              <div class="hm-cat">Entrées</div>
+              <div class="hm-row"><span class="hm-name">Penne Arrabbiata</span><div class="hm-prices"><span class="hm-reg">$24</span><span class="hm-vip">$16</span></div></div>
+              <div class="hm-row"><span class="hm-name">Grilled Branzino</span><div class="hm-prices"><span class="hm-reg">$38</span><span class="hm-vip">$25</span></div></div>
+              <div class="hm-row"><span class="hm-name">Veal Osso Buco</span><div class="hm-prices"><span class="hm-reg">$42</span><span class="hm-vip">$27</span></div></div>
+              <div class="hm-row"><span class="hm-name">Chicken Parm</span><div class="hm-prices"><span class="hm-reg">$28</span><span class="hm-vip">$18</span></div></div>
+            </div>
+            <div>
+              <div class="hm-cat">Pasta</div>
+              <div class="hm-row"><span class="hm-name">Cacio e Pepe</span><div class="hm-prices"><span class="hm-reg">$22</span><span class="hm-vip">$14</span></div></div>
+              <div class="hm-row"><span class="hm-name">Linguine Vongole</span><div class="hm-prices"><span class="hm-reg">$30</span><span class="hm-vip">$20</span></div></div>
+              <div class="hm-row"><span class="hm-name">Rigatoni Bolognese</span><div class="hm-prices"><span class="hm-reg">$26</span><span class="hm-vip">$17</span></div></div>
+              <div class="hm-cat">Sides</div>
+              <div class="hm-row"><span class="hm-name">Caesar Salad</span><div class="hm-prices"><span class="hm-reg">$14</span><span class="hm-vip">$9</span></div></div>
+              <div class="hm-row"><span class="hm-name">Truffle Fries</span><div class="hm-prices"><span class="hm-reg">$12</span><span class="hm-vip">$8</span></div></div>
+              <div class="hm-cat">Dolci</div>
+              <div class="hm-row"><span class="hm-name">Tiramisu</span><div class="hm-prices"><span class="hm-reg">$14</span><span class="hm-vip">$9</span></div></div>
+              <div class="hm-row"><span class="hm-name">Panna Cotta</span><div class="hm-prices"><span class="hm-reg">$12</span><span class="hm-vip">$8</span></div></div>
+            </div>
+          </div>
+          <div class="hm-footer">
+            <div><div class="hm-footer-text">Join VIP — $55/mo</div><div class="hm-footer-sub">Save 35% every visit</div></div>
+            <div class="hm-qr"><svg viewBox="0 0 21 21" xmlns="http://www.w3.org/2000/svg"><rect width="21" height="21" fill="#1B6B4A"/><g fill="#fff"><rect x="1" y="1" width="1" height="1"/><rect x="2" y="1" width="1" height="1"/><rect x="3" y="1" width="1" height="1"/><rect x="4" y="1" width="1" height="1"/><rect x="5" y="1" width="1" height="1"/><rect x="6" y="1" width="1" height="1"/><rect x="7" y="1" width="1" height="1"/><rect x="1" y="2" width="1" height="1"/><rect x="7" y="2" width="1" height="1"/><rect x="9" y="1" width="1" height="1"/><rect x="11" y="1" width="1" height="1"/><rect x="13" y="1" width="1" height="1"/><rect x="14" y="1" width="1" height="1"/><rect x="15" y="1" width="1" height="1"/><rect x="16" y="1" width="1" height="1"/><rect x="17" y="1" width="1" height="1"/><rect x="18" y="1" width="1" height="1"/><rect x="19" y="1" width="1" height="1"/><rect x="1" y="3" width="1" height="1"/><rect x="3" y="3" width="1" height="1"/><rect x="4" y="3" width="1" height="1"/><rect x="5" y="3" width="1" height="1"/><rect x="7" y="3" width="1" height="1"/><rect x="13" y="2" width="1" height="1"/><rect x="19" y="2" width="1" height="1"/><rect x="1" y="4" width="1" height="1"/><rect x="3" y="4" width="1" height="1"/><rect x="4" y="4" width="1" height="1"/><rect x="5" y="4" width="1" height="1"/><rect x="7" y="4" width="1" height="1"/><rect x="1" y="5" width="1" height="1"/><rect x="3" y="5" width="1" height="1"/><rect x="4" y="5" width="1" height="1"/><rect x="5" y="5" width="1" height="1"/><rect x="7" y="5" width="1" height="1"/><rect x="1" y="6" width="1" height="1"/><rect x="7" y="6" width="1" height="1"/><rect x="1" y="7" width="1" height="1"/><rect x="2" y="7" width="1" height="1"/><rect x="3" y="7" width="1" height="1"/><rect x="4" y="7" width="1" height="1"/><rect x="5" y="7" width="1" height="1"/><rect x="6" y="7" width="1" height="1"/><rect x="7" y="7" width="1" height="1"/><rect x="9" y="7" width="1" height="1"/><rect x="11" y="7" width="1" height="1"/><rect x="13" y="7" width="1" height="1"/><rect x="15" y="7" width="1" height="1"/><rect x="17" y="7" width="1" height="1"/><rect x="19" y="7" width="1" height="1"/><rect x="1" y="13" width="1" height="1"/><rect x="2" y="13" width="1" height="1"/><rect x="3" y="13" width="1" height="1"/><rect x="4" y="13" width="1" height="1"/><rect x="5" y="13" width="1" height="1"/><rect x="6" y="13" width="1" height="1"/><rect x="7" y="13" width="1" height="1"/><rect x="9" y="13" width="1" height="1"/><rect x="11" y="13" width="1" height="1"/><rect x="14" y="13" width="1" height="1"/><rect x="16" y="13" width="1" height="1"/><rect x="18" y="13" width="1" height="1"/><rect x="1" y="14" width="1" height="1"/><rect x="7" y="14" width="1" height="1"/><rect x="1" y="15" width="1" height="1"/><rect x="3" y="15" width="1" height="1"/><rect x="4" y="15" width="1" height="1"/><rect x="5" y="15" width="1" height="1"/><rect x="7" y="15" width="1" height="1"/><rect x="1" y="16" width="1" height="1"/><rect x="3" y="16" width="1" height="1"/><rect x="4" y="16" width="1" height="1"/><rect x="5" y="16" width="1" height="1"/><rect x="7" y="16" width="1" height="1"/><rect x="1" y="17" width="1" height="1"/><rect x="3" y="17" width="1" height="1"/><rect x="4" y="17" width="1" height="1"/><rect x="5" y="17" width="1" height="1"/><rect x="7" y="17" width="1" height="1"/><rect x="1" y="18" width="1" height="1"/><rect x="7" y="18" width="1" height="1"/><rect x="1" y="19" width="1" height="1"/><rect x="2" y="19" width="1" height="1"/><rect x="3" y="19" width="1" height="1"/><rect x="4" y="19" width="1" height="1"/><rect x="5" y="19" width="1" height="1"/><rect x="6" y="19" width="1" height="1"/><rect x="7" y="19" width="1" height="1"/><rect x="9" y="19" width="1" height="1"/><rect x="11" y="19" width="1" height="1"/><rect x="13" y="19" width="1" height="1"/><rect x="15" y="19" width="1" height="1"/><rect x="18" y="19" width="1" height="1"/></g></svg></div>
+          </div>
+        </div>
+      </div>
     </div>
   </div>
 </section>
@@ -292,7 +359,7 @@ footer p{font-size:13px;color:var(--text-muted)} footer .logo-foot{font-size:18p
     </div>
     <div class="steps-grid">
       <div class="step fade-up-d2"><div class="step-number">01</div><h3>We Design Your Program</h3><p>We analyze your restaurant's data, design the optimal membership offer, create all materials — menus, signage, QR codes — and set up the billing infrastructure.</p></div>
-      <div class="step fade-up-d3"><div class="step-number">02</div><h3>Customers Subscribe</h3><p>Diners scan a QR code on the menu, table signage, or bill insert. They subscribe in 60 seconds from their phone — no app download. Apple Pay. Google Pay. Done.</p></div>
+      <div class="step fade-up-d3"><div class="step-number">02</div><h3>Customers Subscribe</h3><p>Diners scan a QR code on the menu, table signage, or bill insert. They subscribe in 60 seconds from their phone — no app download needed.</p></div>
       <div class="step fade-up-d4"><div class="step-number">03</div><h3>You Earn Recurring Revenue</h3><p>Members visit more often, spend more per month, bring friends and expose new customers to your restaurant — and you collect their subscription even in months they don't come in.</p></div>
     </div>
   </div>
@@ -415,7 +482,7 @@ footer p{font-size:13px;color:var(--text-muted)} footer .logo-foot{font-size:18p
     </div>
     <div class="features-grid">
       <div class="feature-item fade-up-d2"><div class="feature-icon-wrap"><svg class="icon-svg-sm" viewBox="0 0 24 24"><rect x="1" y="4" width="22" height="16" rx="2" ry="2"/><line x1="1" y1="10" x2="23" y2="10"/></svg></div><div><h4>Billing Infrastructure</h4><p>We process all subscription payments. Revenue is automatically deposited to your bank account. You never touch the billing.</p></div></div>
-      <div class="feature-item fade-up-d3"><div class="feature-icon-wrap"><svg class="icon-svg-sm" viewBox="0 0 24 24"><rect x="5" y="2" width="14" height="20" rx="2" ry="2"/><line x1="12" y1="18" x2="12.01" y2="18"/></svg></div><div><h4>Customer Signup Portal</h4><p>Mobile-optimized signup page with Apple Pay & Google Pay. Customers subscribe in under 60 seconds. No app download needed.</p></div></div>
+      <div class="feature-item fade-up-d3"><div class="feature-icon-wrap"><svg class="icon-svg-sm" viewBox="0 0 24 24"><rect x="5" y="2" width="14" height="20" rx="2" ry="2"/><line x1="12" y1="18" x2="12.01" y2="18"/></svg></div><div><h4>Customer Signup Portal</h4><p>Mobile-optimized signup page. Customers enter their info and card, subscribe in under 60 seconds. No app download needed.</p></div></div>
       <div class="feature-item fade-up-d4"><div class="feature-icon-wrap"><svg class="icon-svg-sm" viewBox="0 0 24 24"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg></div><div><h4>Member Verification Tool</h4><p>Staff enters a name and instantly sees member status and discount. Works on any phone or tablet browser. 5 seconds at checkout.</p></div></div>
     </div>
     <div class="features-bottom">
@@ -568,10 +635,6 @@ function calc(){
     <div class="ar-profit"><div class="ar-label">Annual Profit Impact</div><div class="ar-value">${fmtK(netNewProfit*12)}</div></div>
     <div style="text-align:right;font-size:9px;color:var(--text-muted);margin-top:8px;font-style:italic">* after all LocalMint platform fees</div>`;
 }
-calc();
-</script>
-</body>
-</html>
 calc();
 </script>
 </body>
