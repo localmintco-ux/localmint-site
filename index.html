@@ -205,7 +205,7 @@ nav .container{display:flex;justify-content:space-between;align-items:center}
 /* FEATURES */
 .features{background:var(--bg);transition:background .4s}
 .features-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;margin-top:48px}
-.features-bottom{display:grid;grid-template-columns:repeat(2,1fr);gap:20px;margin-top:20px;max-width:66.66%;margin-left:auto;margin-right:auto}
+.features-bottom{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;margin-top:20px}
 .feature-item{display:flex;gap:16px;padding:24px;background:var(--bg-card);border:1px solid var(--border);border-radius:12px;transition:all .3s}
 .feature-item:hover{border-color:var(--border-hover)}
 .feature-icon-wrap{flex-shrink:0;width:48px;height:48px;background:var(--icon-bg);border-radius:10px;display:flex;align-items:center;justify-content:center}
@@ -274,8 +274,8 @@ footer p{font-size:13px;color:var(--text-muted)} footer .logo-foot{font-size:18p
     <div class="hero-layout">
       <div>
         <div class="hero-badge fade-up">Built for restaurant owners</div>
-        <h1 class="fade-up-d1">Turn your regulars into <em>predictable monthly revenue</em></h1>
-        <p class="hero-sub fade-up-d2">LocalMint adds a VIP membership program to your restaurant — customers subscribe for monthly discounts, and you collect recurring revenue whether they visit or not.</p>
+        <h1 class="fade-up-d1">Turn your customers into <em>subscribing VIP members</em></h1>
+        <p class="hero-sub fade-up-d2">LocalMint builds VIP membership programs that use behavioral psychology to drive visit frequency, increase average order value, and expose your restaurant to new customers — with subscription revenue as the baseline.</p>
         <div class="hero-ctas fade-up-d3">
           <a href="#book" class="btn-primary">Book a Discovery Call →</a>
           <a href="#how" class="btn-secondary">See How It Works</a>
@@ -288,39 +288,42 @@ footer p{font-size:13px;color:var(--text-muted)} footer .logo-foot{font-size:18p
             <div class="hm-sub">Fine Italian Dining &middot; Est. 2019 &middot; Long Island, NY</div>
           </div>
           <div class="hm-legend">
-            <div class="hm-leg"><div class="hm-dot reg"></div><span style="color:#8B7E6A">Regular Price</span></div>
-            <div class="hm-leg"><div class="hm-dot vip"></div><span style="color:#1B6B4A">VIP Member Price</span></div>
+            <div class="hm-leg"><div class="hm-dot reg"></div><span style="color:#8B7E6A">Regular</span></div>
+            <div class="hm-leg"><div class="hm-dot vip"></div><span style="color:#1B6B4A">VIP Member</span></div>
+            <div class="hm-leg"><span style="color:#059669;font-size:8px;font-weight:700">&#9733; COMPLIMENTARY</span></div>
           </div>
           <div class="hm-cols">
             <div>
+              <div class="hm-cat" style="display:flex;justify-content:space-between;align-items:baseline">Beverages <span style="font-size:8px;color:#059669;font-weight:700;letter-spacing:.06em">&#9733; VIP PERK</span></div>
+              <div class="hm-item" style="background:rgba(5,150,105,.08);margin:0 -6px 8px;padding:4px 6px;border-radius:4px"><div class="hm-row"><span class="hm-name" style="color:#059669">House Wine (Glass)</span><div class="hm-dots"></div><div class="hm-prices"><span class="hm-reg">$14</span><span style="color:#059669;font-weight:700;font-size:10px;font-family:'JetBrains Mono',monospace">FREE</span></div></div><div class="hm-desc" style="color:#059669;opacity:.8">Complimentary for VIP members — one per visit</div></div>
               <div class="hm-cat">Antipasti</div>
-              <div class="hm-item"><div class="hm-row"><span class="hm-name">Bruschetta Classica</span><div class="hm-dots"></div><div class="hm-prices"><span class="hm-reg">$16</span><span class="hm-vip">$10</span></div></div><div class="hm-desc">Heirloom tomatoes, fresh basil, aged balsamic</div></div>
-              <div class="hm-item"><div class="hm-row"><span class="hm-name">Calamari Fritti</span><div class="hm-dots"></div><div class="hm-prices"><span class="hm-reg">$18</span><span class="hm-vip">$12</span></div></div><div class="hm-desc">Lightly fried, cherry pepper aioli</div></div>
-              <div class="hm-item"><div class="hm-row"><span class="hm-name">Burrata &amp; Prosciutto</span><div class="hm-dots"></div><div class="hm-prices"><span class="hm-reg">$22</span><span class="hm-vip">$14</span></div></div><div class="hm-desc">San Daniele prosciutto, arugula, truffle honey</div></div>
+              <div class="hm-item"><div class="hm-row"><span class="hm-name">Bruschetta Classica</span><div class="hm-dots"></div><div class="hm-prices"><span class="hm-reg">$16</span><span class="hm-vip">$14</span></div></div><div class="hm-desc">Heirloom tomatoes, fresh basil, aged balsamic</div></div>
+              <div class="hm-item"><div class="hm-row"><span class="hm-name">Calamari Fritti</span><div class="hm-dots"></div><div class="hm-prices"><span class="hm-reg">$18</span><span class="hm-vip">$15</span></div></div><div class="hm-desc">Lightly fried, cherry pepper aioli</div></div>
+              <div class="hm-item"><div class="hm-row"><span class="hm-name">Burrata &amp; Prosciutto</span><div class="hm-dots"></div><div class="hm-prices"><span class="hm-reg">$22</span><span class="hm-vip">$19</span></div></div><div class="hm-desc">San Daniele prosciutto, arugula, truffle honey</div></div>
               <div class="hm-cat">Entr&eacute;es</div>
-              <div class="hm-item"><div class="hm-row"><span class="hm-name">Penne Arrabbiata</span><div class="hm-dots"></div><div class="hm-prices"><span class="hm-reg">$24</span><span class="hm-vip">$16</span></div></div><div class="hm-desc">San Marzano tomato, calabrian chili, pecorino</div></div>
-              <div class="hm-item"><div class="hm-row"><span class="hm-name">Grilled Branzino</span><div class="hm-dots"></div><div class="hm-prices"><span class="hm-reg">$38</span><span class="hm-vip">$25</span></div></div><div class="hm-desc">Mediterranean sea bass, lemon caper butter</div></div>
-              <div class="hm-item"><div class="hm-row"><span class="hm-name">Veal Osso Buco</span><div class="hm-dots"></div><div class="hm-prices"><span class="hm-reg">$42</span><span class="hm-vip">$27</span></div></div><div class="hm-desc">Slow-braised shank, saffron risotto, gremolata</div></div>
-              <div class="hm-item"><div class="hm-row"><span class="hm-name">Chicken Parmigiana</span><div class="hm-dots"></div><div class="hm-prices"><span class="hm-reg">$28</span><span class="hm-vip">$18</span></div></div><div class="hm-desc">Hand-breaded, house marinara, fresh mozzarella</div></div>
-              <div class="hm-item"><div class="hm-row"><span class="hm-name">Lobster Ravioli</span><div class="hm-dots"></div><div class="hm-prices"><span class="hm-reg">$36</span><span class="hm-vip">$23</span></div></div><div class="hm-desc">Butter-poached lobster, sage brown butter</div></div>
+              <div class="hm-item"><div class="hm-row"><span class="hm-name">Penne Arrabbiata</span><div class="hm-dots"></div><div class="hm-prices"><span class="hm-reg">$24</span><span class="hm-vip">$20</span></div></div><div class="hm-desc">San Marzano tomato, calabrian chili, pecorino</div></div>
+              <div class="hm-item"><div class="hm-row"><span class="hm-name">Grilled Branzino</span><div class="hm-dots"></div><div class="hm-prices"><span class="hm-reg">$38</span><span class="hm-vip">$32</span></div></div><div class="hm-desc">Mediterranean sea bass, lemon caper butter</div></div>
+              <div class="hm-item"><div class="hm-row"><span class="hm-name">Veal Osso Buco</span><div class="hm-dots"></div><div class="hm-prices"><span class="hm-reg">$42</span><span class="hm-vip">$36</span></div></div><div class="hm-desc">Slow-braised shank, saffron risotto, gremolata</div></div>
+              <div class="hm-item"><div class="hm-row"><span class="hm-name">Chicken Parmigiana</span><div class="hm-dots"></div><div class="hm-prices"><span class="hm-reg">$28</span><span class="hm-vip">$24</span></div></div><div class="hm-desc">Hand-breaded, house marinara, fresh mozzarella</div></div>
+              <div class="hm-item"><div class="hm-row"><span class="hm-name">Lobster Ravioli</span><div class="hm-dots"></div><div class="hm-prices"><span class="hm-reg">$36</span><span class="hm-vip">$31</span></div></div><div class="hm-desc">Butter-poached lobster, sage brown butter</div></div>
             </div>
             <div>
               <div class="hm-cat">Pasta</div>
-              <div class="hm-item"><div class="hm-row"><span class="hm-name">Cacio e Pepe</span><div class="hm-dots"></div><div class="hm-prices"><span class="hm-reg">$22</span><span class="hm-vip">$14</span></div></div><div class="hm-desc">Tonnarelli, pecorino romano, black pepper</div></div>
-              <div class="hm-item"><div class="hm-row"><span class="hm-name">Linguine alle Vongole</span><div class="hm-dots"></div><div class="hm-prices"><span class="hm-reg">$30</span><span class="hm-vip">$20</span></div></div><div class="hm-desc">Little neck clams, white wine, garlic, parsley</div></div>
-              <div class="hm-item"><div class="hm-row"><span class="hm-name">Rigatoni Bolognese</span><div class="hm-dots"></div><div class="hm-prices"><span class="hm-reg">$26</span><span class="hm-vip">$17</span></div></div><div class="hm-desc">Slow-simmered beef &amp; pork rag&ugrave;, parmigiano</div></div>
+              <div class="hm-item"><div class="hm-row"><span class="hm-name">Cacio e Pepe</span><div class="hm-dots"></div><div class="hm-prices"><span class="hm-reg">$22</span><span class="hm-vip">$19</span></div></div><div class="hm-desc">Tonnarelli, pecorino romano, black pepper</div></div>
+              <div class="hm-item"><div class="hm-row"><span class="hm-name">Linguine alle Vongole</span><div class="hm-dots"></div><div class="hm-prices"><span class="hm-reg">$30</span><span class="hm-vip">$26</span></div></div><div class="hm-desc">Little neck clams, white wine, garlic, parsley</div></div>
+              <div class="hm-item"><div class="hm-row"><span class="hm-name">Rigatoni Bolognese</span><div class="hm-dots"></div><div class="hm-prices"><span class="hm-reg">$26</span><span class="hm-vip">$22</span></div></div><div class="hm-desc">Slow-simmered beef &amp; pork rag&ugrave;, parmigiano</div></div>
               <div class="hm-cat">Sides &amp; Salads</div>
-              <div class="hm-item"><div class="hm-row"><span class="hm-name">Caesar Salad</span><div class="hm-dots"></div><div class="hm-prices"><span class="hm-reg">$14</span><span class="hm-vip">$9</span></div></div><div class="hm-desc">Romaine hearts, white anchovy, croutons</div></div>
-              <div class="hm-item"><div class="hm-row"><span class="hm-name">Truffle Fries</span><div class="hm-dots"></div><div class="hm-prices"><span class="hm-reg">$12</span><span class="hm-vip">$8</span></div></div><div class="hm-desc">Parmigiano, truffle oil, fresh herbs</div></div>
-              <div class="hm-item"><div class="hm-row"><span class="hm-name">Grilled Broccolini</span><div class="hm-dots"></div><div class="hm-prices"><span class="hm-reg">$10</span><span class="hm-vip">$7</span></div></div><div class="hm-desc">Lemon zest, chili flake, olive oil</div></div>
+              <div class="hm-item"><div class="hm-row"><span class="hm-name">Caesar Salad</span><div class="hm-dots"></div><div class="hm-prices"><span class="hm-reg">$14</span><span class="hm-vip">$12</span></div></div><div class="hm-desc">Romaine hearts, white anchovy, croutons</div></div>
+              <div class="hm-item"><div class="hm-row"><span class="hm-name">Truffle Fries</span><div class="hm-dots"></div><div class="hm-prices"><span class="hm-reg">$12</span><span class="hm-vip">$10</span></div></div><div class="hm-desc">Parmigiano, truffle oil, fresh herbs</div></div>
+              <div class="hm-item"><div class="hm-row"><span class="hm-name">Grilled Broccolini</span><div class="hm-dots"></div><div class="hm-prices"><span class="hm-reg">$10</span><span class="hm-vip">$9</span></div></div><div class="hm-desc">Lemon zest, chili flake, olive oil</div></div>
               <div class="hm-cat">Dolci</div>
-              <div class="hm-item"><div class="hm-row"><span class="hm-name">Tiramisu</span><div class="hm-dots"></div><div class="hm-prices"><span class="hm-reg">$14</span><span class="hm-vip">$9</span></div></div><div class="hm-desc">Espresso-soaked ladyfingers, mascarpone</div></div>
-              <div class="hm-item"><div class="hm-row"><span class="hm-name">Panna Cotta</span><div class="hm-dots"></div><div class="hm-prices"><span class="hm-reg">$12</span><span class="hm-vip">$8</span></div></div><div class="hm-desc">Vanilla bean, seasonal berry compote</div></div>
-              <div class="hm-item"><div class="hm-row"><span class="hm-name">Cannoli</span><div class="hm-dots"></div><div class="hm-prices"><span class="hm-reg">$10</span><span class="hm-vip">$7</span></div></div><div class="hm-desc">Ricotta, chocolate chip, pistachio</div></div>
+              <div class="hm-item"><div class="hm-row"><span class="hm-name">Tiramisu</span><div class="hm-dots"></div><div class="hm-prices"><span class="hm-reg">$14</span><span class="hm-vip">$12</span></div></div><div class="hm-desc">Espresso-soaked ladyfingers, mascarpone</div></div>
+              <div class="hm-item"><div class="hm-row"><span class="hm-name">Panna Cotta</span><div class="hm-dots"></div><div class="hm-prices"><span class="hm-reg">$12</span><span class="hm-vip">$10</span></div></div><div class="hm-desc">Vanilla bean, seasonal berry compote</div></div>
+              <div class="hm-item"><div class="hm-row"><span class="hm-name">Cannoli</span><div class="hm-dots"></div><div class="hm-prices"><span class="hm-reg">$10</span><span class="hm-vip">$9</span></div></div><div class="hm-desc">Ricotta, chocolate chip, pistachio</div></div>
             </div>
           </div>
           <div class="hm-footer">
-            <div style="text-align:right"><div class="hm-footer-text">Join VIP &mdash; $55/mo</div><div class="hm-footer-sub">Save 35% on every visit. Scan to join instantly.</div></div>
+            <div style="text-align:right"><div class="hm-footer-text">Join VIP &mdash; $29/mo</div><div class="hm-footer-sub">Free drink every visit, 15% off menu, and more. Scan to join.</div></div>
             <div class="hm-qr"><svg viewBox="0 0 21 21" xmlns="http://www.w3.org/2000/svg"><rect width="21" height="21" fill="#1B6B4A"/><g fill="#fff"><rect x="1" y="1" width="7" height="1"/><rect x="1" y="2" width="1" height="1"/><rect x="7" y="2" width="1" height="1"/><rect x="1" y="3" width="1" height="1"/><rect x="3" y="3" width="3" height="1"/><rect x="7" y="3" width="1" height="1"/><rect x="1" y="4" width="1" height="1"/><rect x="3" y="4" width="3" height="1"/><rect x="7" y="4" width="1" height="1"/><rect x="1" y="5" width="1" height="1"/><rect x="3" y="5" width="3" height="1"/><rect x="7" y="5" width="1" height="1"/><rect x="1" y="6" width="1" height="1"/><rect x="7" y="6" width="1" height="1"/><rect x="1" y="7" width="7" height="1"/><rect x="9" y="7" width="1" height="1"/><rect x="11" y="7" width="1" height="1"/><rect x="13" y="1" width="7" height="1"/><rect x="13" y="2" width="1" height="1"/><rect x="19" y="2" width="1" height="1"/><rect x="13" y="3" width="1" height="1"/><rect x="15" y="3" width="3" height="1"/><rect x="19" y="3" width="1" height="1"/><rect x="13" y="4" width="1" height="1"/><rect x="15" y="4" width="3" height="1"/><rect x="19" y="4" width="1" height="1"/><rect x="13" y="5" width="1" height="1"/><rect x="15" y="5" width="3" height="1"/><rect x="19" y="5" width="1" height="1"/><rect x="13" y="6" width="1" height="1"/><rect x="19" y="6" width="1" height="1"/><rect x="13" y="7" width="7" height="1"/><rect x="1" y="13" width="7" height="1"/><rect x="1" y="14" width="1" height="1"/><rect x="7" y="14" width="1" height="1"/><rect x="1" y="15" width="1" height="1"/><rect x="3" y="15" width="3" height="1"/><rect x="7" y="15" width="1" height="1"/><rect x="1" y="16" width="1" height="1"/><rect x="3" y="16" width="3" height="1"/><rect x="7" y="16" width="1" height="1"/><rect x="1" y="17" width="1" height="1"/><rect x="3" y="17" width="3" height="1"/><rect x="7" y="17" width="1" height="1"/><rect x="1" y="18" width="1" height="1"/><rect x="7" y="18" width="1" height="1"/><rect x="1" y="19" width="7" height="1"/><rect x="9" y="9" width="1" height="1"/><rect x="10" y="10" width="1" height="1"/><rect x="9" y="11" width="1" height="1"/><rect x="11" y="9" width="1" height="1"/><rect x="11" y="11" width="1" height="1"/><rect x="9" y="13" width="1" height="1"/><rect x="11" y="13" width="1" height="1"/><rect x="9" y="15" width="1" height="1"/><rect x="11" y="15" width="1" height="1"/><rect x="9" y="17" width="1" height="1"/><rect x="11" y="17" width="1" height="1"/><rect x="9" y="19" width="1" height="1"/><rect x="11" y="19" width="1" height="1"/><rect x="13" y="9" width="1" height="1"/><rect x="15" y="9" width="1" height="1"/><rect x="17" y="9" width="1" height="1"/><rect x="19" y="9" width="1" height="1"/><rect x="14" y="10" width="1" height="1"/><rect x="16" y="10" width="1" height="1"/><rect x="18" y="10" width="1" height="1"/><rect x="13" y="11" width="1" height="1"/><rect x="15" y="11" width="1" height="1"/><rect x="19" y="11" width="1" height="1"/><rect x="14" y="12" width="1" height="1"/><rect x="17" y="12" width="1" height="1"/><rect x="13" y="13" width="1" height="1"/><rect x="16" y="13" width="1" height="1"/><rect x="18" y="13" width="1" height="1"/><rect x="15" y="14" width="1" height="1"/><rect x="17" y="14" width="1" height="1"/><rect x="19" y="14" width="1" height="1"/><rect x="13" y="15" width="1" height="1"/><rect x="16" y="15" width="1" height="1"/><rect x="14" y="16" width="1" height="1"/><rect x="18" y="16" width="1" height="1"/><rect x="13" y="17" width="1" height="1"/><rect x="15" y="17" width="1" height="1"/><rect x="19" y="17" width="1" height="1"/><rect x="16" y="18" width="1" height="1"/><rect x="18" y="18" width="1" height="1"/><rect x="13" y="19" width="1" height="1"/><rect x="15" y="19" width="1" height="1"/><rect x="17" y="19" width="1" height="1"/></g></svg></div>
           </div>
         </div>
@@ -333,8 +336,8 @@ footer p{font-size:13px;color:var(--text-muted)} footer .logo-foot{font-size:18p
   <div class="container">
     <div class="stats-grid">
       <div class="fade-up-d1"><div class="stat-number">60%</div><div class="stat-label">of restaurant revenue comes from repeat guests</div></div>
-      <div class="fade-up-d2"><div class="stat-number">+28%</div><div class="stat-label">average revenue increase per converted member</div></div>
-      <div class="fade-up-d3"><div class="stat-number">$0</div><div class="stat-label">food cost on subscription revenue when members don't visit</div></div>
+      <div class="fade-up-d2"><div class="stat-number">+40%</div><div class="stat-label">increase in visit frequency for members with per-visit perks</div></div>
+      <div class="fade-up-d3"><div class="stat-number">+18%</div><div class="stat-label">higher average bill when members feel they're getting a deal</div></div>
       <div class="fade-up-d4"><div class="stat-number">3-5x</div><div class="stat-label">higher valuation on subscription MRR at exit</div></div>
     </div>
   </div>
@@ -349,18 +352,18 @@ footer p{font-size:13px;color:var(--text-muted)} footer .logo-foot{font-size:18p
     <div class="problem-grid">
       <div class="problem-card fade-up-d2">
         <div class="problem-icon-wrap"><svg class="icon-svg" viewBox="0 0 24 24"><line x1="18" y1="20" x2="18" y2="10"/><line x1="12" y1="20" x2="12" y2="4"/><line x1="6" y1="20" x2="6" y2="14"/><line x1="2" y1="20" x2="22" y2="20"/></svg></div>
-        <h3>Unpredictable Revenue</h3>
-        <p>You never know if next Tuesday will be a $2,000 day or an $800 day. Your income depends entirely on who walks through the door.</p>
+        <h3>Your Regulars Aren't Coming Often Enough</h3>
+        <p>Your best customers love your food — but they only come twice a month. There's nothing pulling them back this week instead of next. Every empty night is revenue that walked past your door.</p>
       </div>
       <div class="problem-card fade-up-d3">
         <div class="problem-icon-wrap"><svg class="icon-svg" viewBox="0 0 24 24"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg></div>
-        <h3>No Customer Lock-In</h3>
-        <p>Your regulars love you, but there's nothing financially tying them to your restaurant. One bad experience or a new spot opens and they drift.</p>
+        <h3>Discounts Alone Don't Change Behavior</h3>
+        <p>Coupons and loyalty cards save people money on visits they were already going to make. They don't create new visits. You need a reason for customers to come back this week — not just a cheaper bill when they do.</p>
       </div>
       <div class="problem-card fade-up-d4">
         <div class="problem-icon-wrap"><svg class="icon-svg" viewBox="0 0 24 24"><line x1="12" y1="1" x2="12" y2="23"/><path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg></div>
-        <h3>Lower Business Valuation</h3>
-        <p>When it's time to sell or expand, your business is valued on volatile walk-in revenue. Buyers pay premiums for predictable, recurring income.</p>
+        <h3>New Customers Cost 5× More Than Keeping Existing Ones</h3>
+        <p>You spend thousands on ads and promotions to attract new diners. Meanwhile, your regulars — who already love you — aren't being given a reason to bring friends or come more often.</p>
       </div>
     </div>
   </div>
@@ -373,9 +376,9 @@ footer p{font-size:13px;color:var(--text-muted)} footer .logo-foot{font-size:18p
       <h2 class="section-title fade-up-d1">We build your VIP membership program. You collect the revenue.</h2>
     </div>
     <div class="steps-grid">
-      <div class="step fade-up-d2"><div class="step-number">01</div><h3>We Design Your Program</h3><p>We analyze your restaurant's data, design the optimal membership offer, create all materials — menus, signage, QR codes — and set up the billing infrastructure.</p></div>
-      <div class="step fade-up-d3"><div class="step-number">02</div><h3>Customers Subscribe</h3><p>Diners scan a QR code on the menu, table signage, or bill insert. They subscribe in 60 seconds from their phone — no app download needed.</p></div>
-      <div class="step fade-up-d4"><div class="step-number">03</div><h3>You Earn Recurring Revenue</h3><p>Members visit more often, spend more per month, bring friends and expose new customers to your restaurant — and you collect their subscription even in months they don't come in.</p></div>
+      <div class="step fade-up-d2"><div class="step-number">01</div><h3>We Design Your Membership</h3><p>We analyze your menu, margins, and customer behavior to build a VIP program with the right hook item, the right perks, and the right price point — all designed to maximize visit frequency and check size.</p></div>
+      <div class="step fade-up-d3"><div class="step-number">02</div><h3>Customers Subscribe</h3><p>Diners see the VIP perks on the menu — a complimentary item every visit, member pricing, exclusive specials. They scan a QR code and subscribe in 60 seconds from their phone.</p></div>
+      <div class="step fade-up-d4"><div class="step-number">03</div><h3>Frequency & Revenue Compound</h3><p>Members come back every week to claim their free item — and they order more each time. They bring friends who discover your restaurant. And you collect their subscription fee every month, whether they visit or not.</p></div>
     </div>
   </div>
 </section>
@@ -384,7 +387,7 @@ footer p{font-size:13px;color:var(--text-muted)} footer .logo-foot{font-size:18p
   <div class="container">
     <div class="section-header">
       <div class="section-label fade-up">The Conversion Engine</div>
-      <h2 class="section-title fade-up-d1">Your menu becomes your most powerful sales tool.</h2>
+      <h2 class="section-title fade-up-d1">Every visit starts with a reason to come back.</h2>
     </div>
     <div class="exposure-layout">
       <div class="fade-up-d2">
@@ -394,40 +397,43 @@ footer p{font-size:13px;color:var(--text-muted)} footer .logo-foot{font-size:18p
             <div class="hm-sub">Fine Italian Dining &middot; Est. 2019 &middot; Long Island, NY</div>
           </div>
           <div class="hm-legend">
-            <div class="hm-leg"><div class="hm-dot reg"></div><span style="color:#8B7E6A">Regular Price</span></div>
-            <div class="hm-leg"><div class="hm-dot vip"></div><span style="color:#1B6B4A">VIP Member Price</span></div>
+            <div class="hm-leg"><div class="hm-dot reg"></div><span style="color:#8B7E6A">Regular</span></div>
+            <div class="hm-leg"><div class="hm-dot vip"></div><span style="color:#1B6B4A">VIP Member</span></div>
+            <div class="hm-leg"><span style="color:#059669;font-size:8px;font-weight:700">&#9733; COMPLIMENTARY</span></div>
           </div>
           <div class="hm-cols">
             <div>
+              <div class="hm-cat" style="display:flex;justify-content:space-between;align-items:baseline">Beverages <span style="font-size:8px;color:#059669;font-weight:700;letter-spacing:.06em">&#9733; VIP PERK</span></div>
+              <div class="hm-item" style="background:rgba(5,150,105,.08);margin:0 -6px 8px;padding:4px 6px;border-radius:4px"><div class="hm-row"><span class="hm-name" style="color:#059669">House Wine (Glass)</span><div class="hm-dots"></div><div class="hm-prices"><span class="hm-reg">$14</span><span style="color:#059669;font-weight:700;font-size:10px;font-family:'JetBrains Mono',monospace">FREE</span></div></div><div class="hm-desc" style="color:#059669;opacity:.8">Complimentary for VIP members — one per visit</div></div>
               <div class="hm-cat">Antipasti</div>
-              <div class="hm-item"><div class="hm-row"><span class="hm-name">Bruschetta Classica</span><div class="hm-dots"></div><div class="hm-prices"><span class="hm-reg">$16</span><span class="hm-vip">$10</span></div></div><div class="hm-desc">Heirloom tomatoes, fresh basil, aged balsamic</div></div>
-              <div class="hm-item"><div class="hm-row"><span class="hm-name">Calamari Fritti</span><div class="hm-dots"></div><div class="hm-prices"><span class="hm-reg">$18</span><span class="hm-vip">$12</span></div></div><div class="hm-desc">Lightly fried, cherry pepper aioli</div></div>
-              <div class="hm-item"><div class="hm-row"><span class="hm-name">Burrata &amp; Prosciutto</span><div class="hm-dots"></div><div class="hm-prices"><span class="hm-reg">$22</span><span class="hm-vip">$14</span></div></div><div class="hm-desc">San Daniele prosciutto, arugula, truffle honey</div></div>
-              <div class="hm-item"><div class="hm-row"><span class="hm-name">Shrimp Scampi</span><div class="hm-dots"></div><div class="hm-prices"><span class="hm-reg">$20</span><span class="hm-vip">$13</span></div></div><div class="hm-desc">Garlic butter, white wine, grilled sourdough</div></div>
+              <div class="hm-item"><div class="hm-row"><span class="hm-name">Bruschetta Classica</span><div class="hm-dots"></div><div class="hm-prices"><span class="hm-reg">$16</span><span class="hm-vip">$14</span></div></div><div class="hm-desc">Heirloom tomatoes, fresh basil, aged balsamic</div></div>
+              <div class="hm-item"><div class="hm-row"><span class="hm-name">Calamari Fritti</span><div class="hm-dots"></div><div class="hm-prices"><span class="hm-reg">$18</span><span class="hm-vip">$15</span></div></div><div class="hm-desc">Lightly fried, cherry pepper aioli</div></div>
+              <div class="hm-item"><div class="hm-row"><span class="hm-name">Burrata &amp; Prosciutto</span><div class="hm-dots"></div><div class="hm-prices"><span class="hm-reg">$22</span><span class="hm-vip">$19</span></div></div><div class="hm-desc">San Daniele prosciutto, arugula, truffle honey</div></div>
+              <div class="hm-item"><div class="hm-row"><span class="hm-name">Shrimp Scampi</span><div class="hm-dots"></div><div class="hm-prices"><span class="hm-reg">$20</span><span class="hm-vip">$17</span></div></div><div class="hm-desc">Garlic butter, white wine, grilled sourdough</div></div>
               <div class="hm-cat">Entr&eacute;es</div>
-              <div class="hm-item"><div class="hm-row"><span class="hm-name">Penne Arrabbiata</span><div class="hm-dots"></div><div class="hm-prices"><span class="hm-reg">$24</span><span class="hm-vip">$16</span></div></div><div class="hm-desc">San Marzano tomato, calabrian chili, pecorino</div></div>
-              <div class="hm-item"><div class="hm-row"><span class="hm-name">Grilled Branzino</span><div class="hm-dots"></div><div class="hm-prices"><span class="hm-reg">$38</span><span class="hm-vip">$25</span></div></div><div class="hm-desc">Mediterranean sea bass, lemon caper butter</div></div>
-              <div class="hm-item"><div class="hm-row"><span class="hm-name">Veal Osso Buco</span><div class="hm-dots"></div><div class="hm-prices"><span class="hm-reg">$42</span><span class="hm-vip">$27</span></div></div><div class="hm-desc">Slow-braised shank, saffron risotto, gremolata</div></div>
-              <div class="hm-item"><div class="hm-row"><span class="hm-name">Chicken Parmigiana</span><div class="hm-dots"></div><div class="hm-prices"><span class="hm-reg">$28</span><span class="hm-vip">$18</span></div></div><div class="hm-desc">Hand-breaded, house marinara, fresh mozzarella</div></div>
-              <div class="hm-item"><div class="hm-row"><span class="hm-name">Lobster Ravioli</span><div class="hm-dots"></div><div class="hm-prices"><span class="hm-reg">$36</span><span class="hm-vip">$23</span></div></div><div class="hm-desc">Butter-poached lobster, sage brown butter</div></div>
+              <div class="hm-item"><div class="hm-row"><span class="hm-name">Penne Arrabbiata</span><div class="hm-dots"></div><div class="hm-prices"><span class="hm-reg">$24</span><span class="hm-vip">$20</span></div></div><div class="hm-desc">San Marzano tomato, calabrian chili, pecorino</div></div>
+              <div class="hm-item"><div class="hm-row"><span class="hm-name">Grilled Branzino</span><div class="hm-dots"></div><div class="hm-prices"><span class="hm-reg">$38</span><span class="hm-vip">$32</span></div></div><div class="hm-desc">Mediterranean sea bass, lemon caper butter</div></div>
+              <div class="hm-item"><div class="hm-row"><span class="hm-name">Veal Osso Buco</span><div class="hm-dots"></div><div class="hm-prices"><span class="hm-reg">$42</span><span class="hm-vip">$36</span></div></div><div class="hm-desc">Slow-braised shank, saffron risotto, gremolata</div></div>
+              <div class="hm-item"><div class="hm-row"><span class="hm-name">Chicken Parmigiana</span><div class="hm-dots"></div><div class="hm-prices"><span class="hm-reg">$28</span><span class="hm-vip">$24</span></div></div><div class="hm-desc">Hand-breaded, house marinara, fresh mozzarella</div></div>
+              <div class="hm-item"><div class="hm-row"><span class="hm-name">Lobster Ravioli</span><div class="hm-dots"></div><div class="hm-prices"><span class="hm-reg">$36</span><span class="hm-vip">$31</span></div></div><div class="hm-desc">Butter-poached lobster, sage brown butter</div></div>
             </div>
             <div>
               <div class="hm-cat">Pasta</div>
-              <div class="hm-item"><div class="hm-row"><span class="hm-name">Cacio e Pepe</span><div class="hm-dots"></div><div class="hm-prices"><span class="hm-reg">$22</span><span class="hm-vip">$14</span></div></div><div class="hm-desc">Tonnarelli, pecorino romano, black pepper</div></div>
-              <div class="hm-item"><div class="hm-row"><span class="hm-name">Linguine alle Vongole</span><div class="hm-dots"></div><div class="hm-prices"><span class="hm-reg">$30</span><span class="hm-vip">$20</span></div></div><div class="hm-desc">Little neck clams, white wine, garlic, parsley</div></div>
-              <div class="hm-item"><div class="hm-row"><span class="hm-name">Rigatoni Bolognese</span><div class="hm-dots"></div><div class="hm-prices"><span class="hm-reg">$26</span><span class="hm-vip">$17</span></div></div><div class="hm-desc">Slow-simmered beef &amp; pork rag&ugrave;, parmigiano</div></div>
+              <div class="hm-item"><div class="hm-row"><span class="hm-name">Cacio e Pepe</span><div class="hm-dots"></div><div class="hm-prices"><span class="hm-reg">$22</span><span class="hm-vip">$19</span></div></div><div class="hm-desc">Tonnarelli, pecorino romano, black pepper</div></div>
+              <div class="hm-item"><div class="hm-row"><span class="hm-name">Linguine alle Vongole</span><div class="hm-dots"></div><div class="hm-prices"><span class="hm-reg">$30</span><span class="hm-vip">$26</span></div></div><div class="hm-desc">Little neck clams, white wine, garlic, parsley</div></div>
+              <div class="hm-item"><div class="hm-row"><span class="hm-name">Rigatoni Bolognese</span><div class="hm-dots"></div><div class="hm-prices"><span class="hm-reg">$26</span><span class="hm-vip">$22</span></div></div><div class="hm-desc">Slow-simmered beef &amp; pork rag&ugrave;, parmigiano</div></div>
               <div class="hm-cat">Sides &amp; Salads</div>
-              <div class="hm-item"><div class="hm-row"><span class="hm-name">Caesar Salad</span><div class="hm-dots"></div><div class="hm-prices"><span class="hm-reg">$14</span><span class="hm-vip">$9</span></div></div><div class="hm-desc">Romaine hearts, white anchovy, croutons</div></div>
-              <div class="hm-item"><div class="hm-row"><span class="hm-name">Truffle Fries</span><div class="hm-dots"></div><div class="hm-prices"><span class="hm-reg">$12</span><span class="hm-vip">$8</span></div></div><div class="hm-desc">Parmigiano, truffle oil, fresh herbs</div></div>
-              <div class="hm-item"><div class="hm-row"><span class="hm-name">Grilled Broccolini</span><div class="hm-dots"></div><div class="hm-prices"><span class="hm-reg">$10</span><span class="hm-vip">$7</span></div></div><div class="hm-desc">Lemon zest, chili flake, olive oil</div></div>
+              <div class="hm-item"><div class="hm-row"><span class="hm-name">Caesar Salad</span><div class="hm-dots"></div><div class="hm-prices"><span class="hm-reg">$14</span><span class="hm-vip">$12</span></div></div><div class="hm-desc">Romaine hearts, white anchovy, croutons</div></div>
+              <div class="hm-item"><div class="hm-row"><span class="hm-name">Truffle Fries</span><div class="hm-dots"></div><div class="hm-prices"><span class="hm-reg">$12</span><span class="hm-vip">$10</span></div></div><div class="hm-desc">Parmigiano, truffle oil, fresh herbs</div></div>
+              <div class="hm-item"><div class="hm-row"><span class="hm-name">Grilled Broccolini</span><div class="hm-dots"></div><div class="hm-prices"><span class="hm-reg">$10</span><span class="hm-vip">$9</span></div></div><div class="hm-desc">Lemon zest, chili flake, olive oil</div></div>
               <div class="hm-cat">Dolci</div>
-              <div class="hm-item"><div class="hm-row"><span class="hm-name">Tiramisu</span><div class="hm-dots"></div><div class="hm-prices"><span class="hm-reg">$14</span><span class="hm-vip">$9</span></div></div><div class="hm-desc">Espresso-soaked ladyfingers, mascarpone</div></div>
-              <div class="hm-item"><div class="hm-row"><span class="hm-name">Panna Cotta</span><div class="hm-dots"></div><div class="hm-prices"><span class="hm-reg">$12</span><span class="hm-vip">$8</span></div></div><div class="hm-desc">Vanilla bean, seasonal berry compote</div></div>
-              <div class="hm-item"><div class="hm-row"><span class="hm-name">Cannoli</span><div class="hm-dots"></div><div class="hm-prices"><span class="hm-reg">$10</span><span class="hm-vip">$7</span></div></div><div class="hm-desc">Ricotta, chocolate chip, pistachio</div></div>
+              <div class="hm-item"><div class="hm-row"><span class="hm-name">Tiramisu</span><div class="hm-dots"></div><div class="hm-prices"><span class="hm-reg">$14</span><span class="hm-vip">$12</span></div></div><div class="hm-desc">Espresso-soaked ladyfingers, mascarpone</div></div>
+              <div class="hm-item"><div class="hm-row"><span class="hm-name">Panna Cotta</span><div class="hm-dots"></div><div class="hm-prices"><span class="hm-reg">$12</span><span class="hm-vip">$10</span></div></div><div class="hm-desc">Vanilla bean, seasonal berry compote</div></div>
+              <div class="hm-item"><div class="hm-row"><span class="hm-name">Cannoli</span><div class="hm-dots"></div><div class="hm-prices"><span class="hm-reg">$10</span><span class="hm-vip">$9</span></div></div><div class="hm-desc">Ricotta, chocolate chip, pistachio</div></div>
             </div>
           </div>
           <div class="hm-footer">
-            <div style="text-align:right"><div class="hm-footer-text">Join VIP &mdash; $55/mo</div><div class="hm-footer-sub">Save 35% on every visit. Scan to join instantly.</div></div>
+            <div style="text-align:right"><div class="hm-footer-text">Join VIP &mdash; $29/mo</div><div class="hm-footer-sub">Free drink every visit, 15% off menu, and more. Scan to join.</div></div>
             <div class="hm-qr"><svg viewBox="0 0 21 21" xmlns="http://www.w3.org/2000/svg"><rect width="21" height="21" fill="#1B6B4A"/><g fill="#fff"><rect x="1" y="1" width="7" height="1"/><rect x="1" y="2" width="1" height="1"/><rect x="7" y="2" width="1" height="1"/><rect x="1" y="3" width="1" height="1"/><rect x="3" y="3" width="3" height="1"/><rect x="7" y="3" width="1" height="1"/><rect x="1" y="4" width="1" height="1"/><rect x="3" y="4" width="3" height="1"/><rect x="7" y="4" width="1" height="1"/><rect x="1" y="5" width="1" height="1"/><rect x="3" y="5" width="3" height="1"/><rect x="7" y="5" width="1" height="1"/><rect x="1" y="6" width="1" height="1"/><rect x="7" y="6" width="1" height="1"/><rect x="1" y="7" width="7" height="1"/><rect x="9" y="7" width="1" height="1"/><rect x="11" y="7" width="1" height="1"/><rect x="13" y="1" width="7" height="1"/><rect x="13" y="2" width="1" height="1"/><rect x="19" y="2" width="1" height="1"/><rect x="13" y="3" width="1" height="1"/><rect x="15" y="3" width="3" height="1"/><rect x="19" y="3" width="1" height="1"/><rect x="13" y="4" width="1" height="1"/><rect x="15" y="4" width="3" height="1"/><rect x="19" y="4" width="1" height="1"/><rect x="13" y="5" width="1" height="1"/><rect x="15" y="5" width="3" height="1"/><rect x="19" y="5" width="1" height="1"/><rect x="13" y="6" width="1" height="1"/><rect x="19" y="6" width="1" height="1"/><rect x="13" y="7" width="7" height="1"/><rect x="1" y="13" width="7" height="1"/><rect x="1" y="14" width="1" height="1"/><rect x="7" y="14" width="1" height="1"/><rect x="1" y="15" width="1" height="1"/><rect x="3" y="15" width="3" height="1"/><rect x="7" y="15" width="1" height="1"/><rect x="1" y="16" width="1" height="1"/><rect x="3" y="16" width="3" height="1"/><rect x="7" y="16" width="1" height="1"/><rect x="1" y="17" width="1" height="1"/><rect x="3" y="17" width="3" height="1"/><rect x="7" y="17" width="1" height="1"/><rect x="1" y="18" width="1" height="1"/><rect x="7" y="18" width="1" height="1"/><rect x="1" y="19" width="7" height="1"/><rect x="9" y="9" width="1" height="1"/><rect x="10" y="10" width="1" height="1"/><rect x="9" y="11" width="1" height="1"/><rect x="11" y="9" width="1" height="1"/><rect x="11" y="11" width="1" height="1"/><rect x="9" y="13" width="1" height="1"/><rect x="11" y="13" width="1" height="1"/><rect x="9" y="15" width="1" height="1"/><rect x="11" y="15" width="1" height="1"/><rect x="9" y="17" width="1" height="1"/><rect x="11" y="17" width="1" height="1"/><rect x="9" y="19" width="1" height="1"/><rect x="11" y="19" width="1" height="1"/><rect x="13" y="9" width="1" height="1"/><rect x="15" y="9" width="1" height="1"/><rect x="17" y="9" width="1" height="1"/><rect x="19" y="9" width="1" height="1"/><rect x="14" y="10" width="1" height="1"/><rect x="16" y="10" width="1" height="1"/><rect x="18" y="10" width="1" height="1"/><rect x="13" y="11" width="1" height="1"/><rect x="15" y="11" width="1" height="1"/><rect x="19" y="11" width="1" height="1"/><rect x="14" y="12" width="1" height="1"/><rect x="17" y="12" width="1" height="1"/><rect x="13" y="13" width="1" height="1"/><rect x="16" y="13" width="1" height="1"/><rect x="18" y="13" width="1" height="1"/><rect x="15" y="14" width="1" height="1"/><rect x="17" y="14" width="1" height="1"/><rect x="19" y="14" width="1" height="1"/><rect x="13" y="15" width="1" height="1"/><rect x="16" y="15" width="1" height="1"/><rect x="14" y="16" width="1" height="1"/><rect x="18" y="16" width="1" height="1"/><rect x="13" y="17" width="1" height="1"/><rect x="15" y="17" width="1" height="1"/><rect x="19" y="17" width="1" height="1"/><rect x="16" y="18" width="1" height="1"/><rect x="18" y="18" width="1" height="1"/><rect x="13" y="19" width="1" height="1"/><rect x="15" y="19" width="1" height="1"/><rect x="17" y="19" width="1" height="1"/></g></svg></div>
           </div>
         </div>
@@ -437,13 +443,13 @@ footer p{font-size:13px;color:var(--text-muted)} footer .logo-foot{font-size:18p
     <div class="exposure-description      </div>
     </div>
     <div class="exposure-description fade-up-d4">
-      <p>Every item on the menu shows two prices — regular and VIP. Before your customer even orders, they're calculating savings on every appetizer, every entrée, every glass of wine. <strong>The menu does the selling for you — silently, on every table, at every meal.</strong> By the time they finish dinner, the membership has already made sense. They just need a place to sign up.</p>
+      <p>The menu doesn't just show prices — it shows a free glass of wine waiting for VIP members, member-only pricing on every item, and exclusive specials they can't get otherwise. <strong>It turns a passive diner into an active subscriber by stacking value they can see before they even order.</strong> The complimentary item is the hook. The discount is the logic. The exclusive access is the identity. Together, they create a customer who comes back every week.</p>
     </div>
     <div class="tp-bar fade-up-d5">
-      <div class="tp-bar-item"><div class="tp-bar-num">01</div><div class="tp-bar-title">Menu Dual Pricing</div><div class="tp-bar-desc">Every item shows regular vs. VIP price</div></div>
-      <div class="tp-bar-item"><div class="tp-bar-num">02</div><div class="tp-bar-title">Check Presenter Card</div><div class="tp-bar-desc">VIP offer + QR code with every bill</div></div>
-      <div class="tp-bar-item"><div class="tp-bar-num">03</div><div class="tp-bar-title">Receipt Footer</div><div class="tp-bar-desc">Member verification on every check</div></div>
-      <div class="tp-bar-item"><div class="tp-bar-num">04</div><div class="tp-bar-title">Table Signage</div><div class="tp-bar-desc">QR code tents on every table</div></div>
+      <div class="tp-bar-item"><div class="tp-bar-num">01</div><div class="tp-bar-title">Menu VIP Perks</div><div class="tp-bar-desc">Free item + member pricing on every page</div></div>
+      <div class="tp-bar-item"><div class="tp-bar-num">02</div><div class="tp-bar-title">Table Signage</div><div class="tp-bar-desc">QR code tents with the offer on every table</div></div>
+      <div class="tp-bar-item"><div class="tp-bar-num">03</div><div class="tp-bar-title">Check Presenter Card</div><div class="tp-bar-desc">Value stack + QR code with every bill</div></div>
+      <div class="tp-bar-item"><div class="tp-bar-num">04</div><div class="tp-bar-title">Server Introduction</div><div class="tp-bar-desc">"Are you a VIP member?" at every table</div></div>
     </div>
   </div>
 </section>
@@ -455,9 +461,9 @@ footer p{font-size:13px;color:var(--text-muted)} footer .logo-foot{font-size:18p
       <h2 class="section-title fade-up-d1">Here's what this looks like for a typical Long Island restaurant</h2>
     </div>
     <div class="revenue-grid">
-      <div class="revenue-card fade-up-d2"><div class="label">Subscription MRR</div><div class="value">$8,250</div><div class="detail">150 members × $55/mo in predictable, recurring revenue hitting your bank account every month</div></div>
-      <div class="revenue-card fade-up-d3"><div class="label">Per Customer Revenue Increase</div><div class="value">+28%</div><div class="detail">Members generate more monthly revenue through subscription fees, increased visit frequency, and higher spend per visit</div></div>
-      <div class="revenue-card highlight fade-up-d4"><div class="label">Net New Annual Profit</div><div class="value">$37K+</div><div class="detail">Additional yearly profit after food costs and all LocalMint fees — money that didn't exist before</div></div>
+      <div class="revenue-card fade-up-d2"><div class="label">Subscription MRR</div><div class="value">$4,350</div><div class="detail">150 members × $29/mo — lower price, higher conversion, same predictable recurring revenue</div></div>
+      <div class="revenue-card fade-up-d3"><div class="label">Per Customer Revenue Increase</div><div class="value">+40%</div><div class="detail">Members visit 40% more often when they have a free item waiting for them — the hook drives the habit</div></div>
+      <div class="revenue-card highlight fade-up-d4"><div class="label">Net New Annual Profit</div><div class="value">$42K+</div><div class="detail">More total profit than the old model — lower margin hit per visit but dramatically more visits and higher check sizes</div></div>
       <div class="revenue-card fade-up-d5"><div class="label">Business Valuation Impact</div><div class="value">3-5×</div><div class="detail">Subscription MRR is valued at 3-5× by buyers vs. 1-2× for walk-in revenue. Your business becomes worth more.</div></div>
     </div>
   </div>
@@ -483,8 +489,8 @@ footer p{font-size:13px;color:var(--text-muted)} footer .logo-foot{font-size:18p
       </div>
       <div class="calc-panel tier-right">
         <h4><svg class="icon-svg-sm" viewBox="0 0 24 24" style="width:18px;height:18px"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg> Membership Design</h4>
-        <div class="slider-group"><div class="slider-label"><label>Subscription Price</label><span class="val" onclick="editVal(this,'subprice','$','')" id="d-subprice">$55</span></div><input type="range" id="subprice" min="19" max="99" value="55" oninput="calc()"><div class="slider-range"><span>$19</span><span>monthly</span><span>$99</span></div></div>
-        <div class="slider-group"><div class="slider-label"><label>Member Discount</label><span class="val" onclick="editVal(this,'discount','','%')" id="d-discount">35%</span></div><input type="range" id="discount" min="15" max="50" value="35" oninput="calc()"><div class="slider-range"><span>15%</span><span>off visits</span><span>50%</span></div></div>
+        <div class="slider-group"><div class="slider-label"><label>Subscription Price</label><span class="val" onclick="editVal(this,'subprice','$','')" id="d-subprice">$29</span></div><input type="range" id="subprice" min="19" max="99" value="29" oninput="calc()"><div class="slider-range"><span>$19</span><span>monthly</span><span>$99</span></div></div>
+        <div class="slider-group"><div class="slider-label"><label>Member Discount</label><span class="val" onclick="editVal(this,'discount','','%')" id="d-discount">15%</span></div><input type="range" id="discount" min="15" max="50" value="15" oninput="calc()"><div class="slider-range"><span>15%</span><span>off visits</span><span>50%</span></div></div>
         <div class="slider-group"><div class="slider-label"><label>Conversion Rate</label><span class="val" onclick="editVal(this,'conv','','%')" id="d-conv">20%</span></div><input type="range" id="conv" min="5" max="50" value="20" oninput="calc()"><div class="slider-range"><span>5%</span><span>of regulars</span><span>50%</span></div></div>
       </div>
       <div class="calc-panel tier-right-dark">
@@ -503,13 +509,14 @@ footer p{font-size:13px;color:var(--text-muted)} footer .logo-foot{font-size:18p
       <h2 class="section-title fade-up-d1">Everything is built, managed, and optimized for you</h2>
     </div>
     <div class="features-grid">
-      <div class="feature-item fade-up-d2"><div class="feature-icon-wrap"><svg class="icon-svg-sm" viewBox="0 0 24 24"><rect x="1" y="4" width="22" height="16" rx="2" ry="2"/><line x1="1" y1="10" x2="23" y2="10"/></svg></div><div><h4>Billing Infrastructure</h4><p>We process all subscription payments. Revenue is automatically deposited to your bank account. You never touch the billing.</p></div></div>
-      <div class="feature-item fade-up-d3"><div class="feature-icon-wrap"><svg class="icon-svg-sm" viewBox="0 0 24 24"><rect x="5" y="2" width="14" height="20" rx="2" ry="2"/><line x1="12" y1="18" x2="12.01" y2="18"/></svg></div><div><h4>Customer Signup Portal</h4><p>Mobile-optimized signup page. Customers enter their info and card, subscribe in under 60 seconds. No app download needed.</p></div></div>
-      <div class="feature-item fade-up-d4"><div class="feature-icon-wrap"><svg class="icon-svg-sm" viewBox="0 0 24 24"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg></div><div><h4>Member Verification Tool</h4><p>Staff enters a name and instantly sees member status and discount. Works on any phone or tablet browser. 5 seconds at checkout.</p></div></div>
+      <div class="feature-item fade-up-d2"><div class="feature-icon-wrap"><svg class="icon-svg-sm" viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg></div><div><h4>Custom Offer Design</h4><p>We analyze your menu, margins, and customer base to build the perfect VIP offer — the right hook item, discount, and exclusive perks engineered to drive frequency and protect your margins.</p></div></div>
+      <div class="feature-item fade-up-d3"><div class="feature-icon-wrap"><svg class="icon-svg-sm" viewBox="0 0 24 24"><rect x="1" y="4" width="22" height="16" rx="2" ry="2"/><line x1="1" y1="10" x2="23" y2="10"/></svg></div><div><h4>Billing Infrastructure</h4><p>We handle all subscription billing, payment processing, cancellations, and failed payment recovery. Revenue is deposited to your account automatically.</p></div></div>
+      <div class="feature-item fade-up-d4"><div class="feature-icon-wrap"><svg class="icon-svg-sm" viewBox="0 0 24 24"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/></svg></div><div><h4>Menu & Signage Materials</h4><p>We design your VIP menu inserts, table tents, check presenter cards, and QR codes. Print-ready and personalized to your restaurant’s brand.</p></div></div>
     </div>
-    <div class="features-bottom">
-      <div class="feature-item fade-up-d5"><div class="feature-icon-wrap"><svg class="icon-svg-sm" viewBox="0 0 24 24"><path d="M21.21 15.89A10 10 0 1 1 8 2.83"/><path d="M22 12A10 10 0 0 0 12 2v10z"/></svg></div><div><h4>Analytics Dashboard</h4><p>Track active subscribers, MRR, churn, and revenue impact in real time. See exactly how the program is performing.</p></div></div>
-      <div class="feature-item fade-up-d6"><div class="feature-icon-wrap"><svg class="icon-svg-sm" viewBox="0 0 24 24"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/></svg></div><div><h4>Menu & Signage Materials</h4><p>We generate all your VIP menu inserts, table tents, bill inserts, and QR codes. Print-ready PDFs personalized to your restaurant.</p></div></div>
+    <div class="features-grid" style="margin-top:20px">
+      <div class="feature-item fade-up-d5"><div class="feature-icon-wrap"><svg class="icon-svg-sm" viewBox="0 0 24 24"><rect x="5" y="2" width="14" height="20" rx="2" ry="2"/><line x1="12" y1="18" x2="12.01" y2="18"/></svg></div><div><h4>Customer Signup Portal</h4><p>Mobile-optimized page where customers sign up with their card in under 60 seconds. No app download needed. Works from any QR code scan.</p></div></div>
+      <div class="feature-item fade-up-d6"><div class="feature-icon-wrap"><svg class="icon-svg-sm" viewBox="0 0 24 24"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg></div><div><h4>Member Verification Tool</h4><p>Server verifies VIP status when the customer sits down, delivers their complimentary item, and the member discount applies at checkout. Works on any device.</p></div></div>
+      <div class="feature-item fade-up-d7"><div class="feature-icon-wrap"><svg class="icon-svg-sm" viewBox="0 0 24 24"><path d="M21.21 15.89A10 10 0 1 1 8 2.83"/><path d="M22 12A10 10 0 0 0 12 2v10z"/></svg></div><div><h4>Analytics Dashboard</h4><p>Track active subscribers, MRR, visit frequency, signup page conversion rates, and revenue impact in real time.</p></div></div>
     </div>
   </div>
 </section>
@@ -529,7 +536,7 @@ footer p{font-size:13px;color:var(--text-muted)} footer .logo-foot{font-size:18p
         <div class="math-line"><span class="ml-label">Conversion rate</span><span class="ml-val">×3%</span></div>
         <div class="math-line"><span class="ml-label">New signups per day</span><span class="ml-val">~5</span></div>
         <div class="math-line"><span class="ml-label">Per month (26 days)</span><span class="ml-val">~130</span></div>
-        <div class="math-line result"><span class="ml-label">New MRR added monthly</span><span class="ml-val">$7,150</span></div>
+        <div class="math-line result"><span class="ml-label">New MRR added monthly</span><span class="ml-val">$3,770</span></div>
       </div>
     </div>
   </div>
@@ -537,8 +544,8 @@ footer p{font-size:13px;color:var(--text-muted)} footer .logo-foot{font-size:18p
 
 <section class="cta-section" id="book">
   <div class="container">
-    <h2 class="fade-up">Ready to add recurring revenue to your restaurant?</h2>
-    <p class="fade-up-d1">Book a free 15-minute call. We'll walk through your numbers and show you exactly what a VIP membership program would look like for your restaurant.</p>
+    <h2 class="fade-up">See what a VIP program would look like for your restaurant.</h2>
+    <p class="fade-up-d1">Book a free 15-minute call. We'll analyze your restaurant's numbers and show you exactly what a VIP membership program would look like — the right offer, the right price, and the projected impact on your bottom line.</p>
     <div class="calendly-wrap fade-up-d2">
       <iframe src="https://calendly.com/localmintco/15min?hide_gdpr_banner=1" loading="lazy"></iframe>
     </div>
@@ -596,11 +603,12 @@ function calc(){
   const conv=+document.getElementById('conv').value;
 
   // Fixed backend assumptions (not user-adjustable)
-  const FREQ_BOOST_PCT=25;       // Members visit 25% more often (industry data: loyalty members visit 20-30% more)
-  const ORDER_MORE_PCT=0.10;     // Members order 10% more per visit (perceived deal effect, industry floor: 10-20%)
+  const FREQ_BOOST_PCT=40;       // Members visit 40% more often with per-visit hook item (Panera Sip Club data: 3-4x increase)
+  const ORDER_MORE_PCT=0.15;     // Members order 15% more per visit (free item anchors higher spending)
+  const HOOK_ITEM_COST=3.50;     // Food cost of complimentary item per visit (glass of wine, dessert etc)
   const GHOST_MONTHS=1;          // Members pay but don't visit ~1 month/year (subscription non-usage, conservative end of 1-2)
   const LM_FLAT_FEE=199;         // LocalMint monthly platform fee
-  const LM_MRR_PCT=0.05;         // LocalMint 5% of subscription MRR
+  const LM_MRR_PCT=0.15;         // LocalMint 15% of subscription MRR
   const EXIT_MULTIPLE=4;         // Subscription MRR valued at 4x annual for business exit
 
   // Display values
@@ -629,8 +637,8 @@ function calc(){
 
   // Members order 10% more per visit (deal perception effect)
   const memberTicket=discountedTicket*(1+ORDER_MORE_PCT);
-  // Food cost scales with the extra ordering
-  const memberFoodCost=foodCostPerVisit*(1+ORDER_MORE_PCT);
+  // Food cost scales with the extra ordering + hook item
+  const memberFoodCost=foodCostPerVisit*(1+ORDER_MORE_PCT)+HOOK_ITEM_COST;
 
   const beforeRevPerCust=visits*aov;
   const beforeProfitPerCust=beforeRevPerCust-(visits*foodCostPerVisit);
