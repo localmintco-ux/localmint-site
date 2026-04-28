@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-theme="dark">
 <head>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -48,6 +48,33 @@
     pointer-events: none;
     z-index: 0;
   }
+
+
+  [data-theme="light"] {
+    --bg: #F7FAF8;
+    --bg-elev: #EDF3EF;
+    --bg-card: #FFFFFF;
+    --green: #1B6B4A;
+    --green-deep: #0F4A33;
+    --mint: #1B6B4A;
+    --mint-soft: #15573C;
+    --white: #0A0F0D;
+    --muted: #4A5E52;
+    --line: rgba(0,0,0,0.08);
+    --line-strong: rgba(27,107,74,0.25);
+  }
+  [data-theme="light"] body::before { display: none; }
+  [data-theme="light"] body::after { display: none; }
+  [data-theme="light"] h1.proposal-title em { color: #1B6B4A; -webkit-text-fill-color: #1B6B4A; }
+  [data-theme="light"] .topnav { background: rgba(247,250,248,0.9); }
+  [data-theme="light"] .cta-btn, [data-theme="light"] .inline-book, [data-theme="light"] .topnav-cta { background: #1B6B4A; }
+  [data-theme="light"] .cta-btn:hover, [data-theme="light"] .inline-book:hover { background: #15573C; }
+  [data-theme="light"] .floating-cta { background: #1B6B4A; box-shadow: 0 16px 40px -8px rgba(27,107,74,0.4); }
+  .theme-toggle{background:none;border:1px solid var(--line);border-radius:8px;padding:7px 9px;cursor:pointer;display:flex;align-items:center;justify-content:center;transition:all .3s}
+  .theme-toggle:hover{border-color:var(--mint)}
+  .theme-toggle svg{width:18px;height:18px;stroke:var(--muted);fill:none;stroke-width:2;stroke-linecap:round;stroke-linejoin:round}
+  .theme-toggle .icon-moon{display:block} .theme-toggle .icon-sun{display:none}
+  [data-theme="light"] .theme-toggle .icon-moon{display:none} [data-theme="light"] .theme-toggle .icon-sun{display:block}
 
   body::after {
     content: '';
@@ -1167,6 +1194,376 @@
   }
 
 
+  /* ============ MENU REPLICA - matches The Shed's actual menu ============ */
+  .menu-replica-wrap {
+    margin-top: 32px;
+  }
+
+  .menu-replica {
+    background:
+      radial-gradient(ellipse 70% 60% at 20% 10%, rgba(180, 160, 100, 0.06), transparent 60%),
+      radial-gradient(ellipse 60% 50% at 90% 80%, rgba(180, 160, 100, 0.05), transparent 60%),
+      #F2EBD3;
+    color: #1a1a1a;
+    border-radius: 12px;
+    padding: 44px 52px 36px;
+    font-family: 'Outfit', sans-serif;
+    position: relative;
+    box-shadow:
+      0 32px 80px -24px rgba(0,0,0,0.6),
+      0 0 0 1px rgba(0,0,0,0.08);
+    overflow: hidden;
+  }
+
+  /* Top member banner */
+  .mr-member-banner {
+    background: #1a3329;
+    color: #F2EBD3;
+    text-align: center;
+    padding: 12px 20px;
+    margin: -44px -52px 28px;
+    font-size: 11px;
+    letter-spacing: 0.28em;
+    font-weight: 700;
+    text-transform: uppercase;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+  }
+
+  .mr-member-banner::before,
+  .mr-member-banner::after {
+    content: '';
+    height: 1px;
+    flex: 0 0 32px;
+    background: rgba(242, 235, 211, 0.4);
+  }
+
+  /* Logo block */
+  .mr-logo-block {
+    text-align: center;
+    margin-bottom: 28px;
+  }
+
+  .mr-logo-frame {
+    display: inline-block;
+    border: 2.5px solid #1a1a1a;
+    padding: 12px 38px 10px;
+    position: relative;
+    text-align: center;
+  }
+
+  .mr-logo-frame .mr-tiny {
+    display: block;
+    font-size: 11px;
+    font-weight: 600;
+    letter-spacing: 0.04em;
+    line-height: 1;
+    text-align: left;
+    margin-left: -22px;
+    margin-bottom: 0;
+  }
+
+  .mr-logo-frame .mr-big {
+    display: block;
+    font-size: 36px;
+    font-weight: 800;
+    letter-spacing: -0.01em;
+    line-height: 0.92;
+  }
+
+  .mr-logo-frame .mr-tiny-script {
+    display: block;
+    font-size: 9px;
+    font-weight: 600;
+    letter-spacing: 0.18em;
+    margin-top: 4px;
+  }
+
+  .mr-meta-line {
+    margin-top: 10px;
+    font-size: 10px;
+    letter-spacing: 0.06em;
+    color: #2a2a2a;
+    text-transform: uppercase;
+    font-weight: 500;
+  }
+
+  /* 2-column body */
+  .mr-body {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 36px 56px;
+    margin-top: 8px;
+  }
+
+  /* Section header */
+  .mr-section-head {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 16px;
+  }
+
+  .mr-section-head .mr-rule {
+    flex: 0 0 18px;
+    height: 1.5px;
+    background: #1a1a1a;
+  }
+
+  .mr-section-head .mr-rule:last-child {
+    flex: 1;
+  }
+
+  .mr-section-title {
+    font-size: 22px;
+    font-weight: 800;
+    letter-spacing: 0.02em;
+    margin: 0;
+    color: #1a1a1a;
+  }
+
+  .mr-section-note {
+    font-size: 9px;
+    color: #4a4a4a;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+    margin-bottom: 14px;
+    font-weight: 500;
+    line-height: 1.5;
+  }
+
+  /* Menu item */
+  .mr-item {
+    margin-bottom: 14px;
+  }
+
+  .mr-item-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    gap: 12px;
+    margin-bottom: 2px;
+  }
+
+  .mr-item-name {
+    font-weight: 800;
+    font-size: 13.5px;
+    letter-spacing: 0.01em;
+    text-transform: uppercase;
+    color: #1a1a1a;
+  }
+
+  .mr-item-prices {
+    display: inline-flex;
+    align-items: baseline;
+    gap: 6px;
+    flex-shrink: 0;
+    white-space: nowrap;
+  }
+
+  .mr-price-old {
+    font-weight: 700;
+    font-size: 13px;
+    color: #999;
+    text-decoration: line-through;
+    text-decoration-thickness: 1.5px;
+  }
+
+  .mr-price-old sup { font-size: 8px; vertical-align: super; }
+
+  .mr-price-arrow {
+    font-size: 11px;
+    color: #1a3329;
+    font-weight: 600;
+  }
+
+  .mr-price-member {
+    font-weight: 800;
+    font-size: 14px;
+    color: #1a3329;
+    background: rgba(26, 51, 41, 0.08);
+    padding: 1px 6px;
+    border-radius: 3px;
+  }
+
+  .mr-price-member sup { font-size: 8px; vertical-align: super; }
+
+  .mr-item-desc {
+    font-size: 10.5px;
+    color: #2a2a2a;
+    letter-spacing: 0.02em;
+    text-transform: uppercase;
+    line-height: 1.5;
+    font-weight: 500;
+  }
+
+  .mr-gf {
+    font-size: 9px;
+    font-weight: 600;
+  }
+
+  /* Free hook item */
+  .mr-item.mr-free {
+    background: #1a3329;
+    color: #F2EBD3;
+    padding: 16px 18px 14px;
+    border-radius: 6px;
+    margin: 8px 0 18px;
+    box-shadow: 0 8px 20px -8px rgba(26, 51, 41, 0.4);
+    position: relative;
+  }
+
+  .mr-item.mr-free::before {
+    content: '★ FREE FOR MEMBERS · EVERY VISIT';
+    position: absolute;
+    top: -9px;
+    left: 14px;
+    background: #d4a017;
+    color: #1a1a1a;
+    font-size: 9px;
+    font-weight: 800;
+    padding: 2px 10px;
+    border-radius: 3px;
+    letter-spacing: 0.1em;
+  }
+
+  .mr-item.mr-free .mr-item-name { color: #F2EBD3; margin-top: 4px; }
+  .mr-item.mr-free .mr-item-desc { color: rgba(242, 235, 211, 0.7); }
+  .mr-item.mr-free .mr-price-old {
+    color: rgba(242, 235, 211, 0.55);
+  }
+  .mr-item.mr-free .mr-price-arrow { color: #34D399; }
+  .mr-item.mr-free .mr-price-free {
+    background: #34D399;
+    color: #1a3329;
+    padding: 3px 10px;
+    border-radius: 3px;
+    font-size: 12px;
+    font-weight: 800;
+    letter-spacing: 0.08em;
+  }
+
+  /* Members-only exclusive */
+  .mr-item.mr-exclusive {
+    border: 1.5px dashed #1a3329;
+    padding: 14px 16px 12px;
+    border-radius: 6px;
+    margin: 8px 0 16px;
+    background: rgba(26, 51, 41, 0.04);
+    position: relative;
+  }
+
+  .mr-item.mr-exclusive::before {
+    content: '★ MEMBERS ONLY · YEAR-ROUND';
+    position: absolute;
+    top: -9px;
+    left: 12px;
+    background: #1a3329;
+    color: #d4a017;
+    font-size: 9px;
+    font-weight: 800;
+    padding: 2px 10px;
+    border-radius: 3px;
+    letter-spacing: 0.1em;
+  }
+
+  .mr-item.mr-exclusive .mr-item-name { margin-top: 4px; }
+
+  /* Footer */
+  .mr-footer-strip {
+    margin-top: 36px;
+    padding-top: 24px;
+    border-top: 1.5px solid #1a1a1a;
+    display: grid;
+    grid-template-columns: auto 1fr auto;
+    gap: 28px;
+    align-items: center;
+  }
+
+  .mr-mason-jar {
+    width: 60px;
+    height: 76px;
+    flex-shrink: 0;
+  }
+
+  .mr-footer-script {
+    font-size: 22px;
+    font-style: italic;
+    font-weight: 400;
+    color: #1a1a1a;
+    letter-spacing: -0.01em;
+    transform: rotate(-2deg);
+    line-height: 1.1;
+  }
+
+  .mr-qr-section {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    background: #1a3329;
+    padding: 12px 16px;
+    border-radius: 8px;
+    color: #F2EBD3;
+  }
+
+  .mr-qr-box {
+    width: 60px;
+    height: 60px;
+    background: white;
+    border-radius: 4px;
+    padding: 4px;
+    flex-shrink: 0;
+  }
+
+  .mr-qr-text {
+    font-size: 10px;
+    letter-spacing: 0.02em;
+    line-height: 1.4;
+    color: rgba(242, 235, 211, 0.85);
+  }
+
+  .mr-qr-text strong {
+    display: block;
+    color: #F2EBD3;
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 0.06em;
+    margin-bottom: 3px;
+    text-transform: uppercase;
+  }
+
+  .mr-qr-text .mr-qr-price {
+    color: #34D399;
+    font-weight: 700;
+    margin-top: 4px;
+    display: block;
+    font-size: 11px;
+  }
+
+  .mr-legal {
+    margin-top: 22px;
+    padding-top: 14px;
+    border-top: 1px dashed #999;
+    font-size: 8.5px;
+    color: #555;
+    text-align: center;
+    line-height: 1.5;
+    letter-spacing: 0.02em;
+  }
+
+  @media (max-width: 880px) {
+    .menu-replica { padding: 28px 24px 24px; }
+    .mr-member-banner { margin: -28px -24px 24px; padding: 10px 14px; font-size: 9px; letter-spacing: 0.16em; gap: 8px; }
+    .mr-member-banner::before, .mr-member-banner::after { flex: 0 0 14px; }
+    .mr-body { grid-template-columns: 1fr; gap: 28px; }
+    .mr-logo-frame .mr-big { font-size: 28px; }
+    .mr-section-title { font-size: 18px; }
+    .mr-footer-strip { grid-template-columns: 1fr; gap: 18px; text-align: center; justify-items: center; }
+    .mr-footer-script { transform: none; font-size: 18px; }
+  }
+
   /* ============ SOFTWARE MOCKUPS ============ */
   .software-grid {
     display: grid;
@@ -1666,7 +2063,10 @@
     </a>
     <div class="topnav-links">
       <a href="https://localmint.co">Home</a>
-      <a href="https://localmint.co/how-it-works">How It Works</a>
+      <button class="theme-toggle" onclick="toggleTheme()" aria-label="Toggle theme">
+        <svg class="icon-moon" viewBox="0 0 24 24"><path d="M21 12.79A9 9 0 1 1 11.21 3a7 7 0 0 0 9.79 9.79z"/></svg>
+        <svg class="icon-sun" viewBox="0 0 24 24"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></svg>
+      </button>
       <a href="#book-call" class="topnav-cta">Book a Call</a>
     </div>
   </div>
@@ -1772,6 +2172,377 @@
         <div class="tag">Exclusive Perk · 02</div>
         <h4>Priority seating on busy nights. <span class="optional">(optional)</span></h4>
         <p>Members text ahead and get bumped to the front of the wait list. No reservation system overhaul required — just a simple status flag in your existing FOH flow. Full reservations (Resy/OpenTable integration) available as a Phase 2 upgrade.</p>
+      </div>
+    </div>
+
+    <!-- ============ MENU REPLICA ============ -->
+    <h3 style="margin-top: 64px; margin-bottom: 12px; font-size: 22px; font-weight: 500;">What members will see at the table</h3>
+    <p style="margin-bottom: 24px;">A faithful mockup of The Shed's existing menu — same paper, same layout, same hand-drawn flourishes — with member pricing layered next to each item, the Shed Fries highlighted as a free hook item, and the Lobster Bowl badged as a year-round members-only exclusive.</p>
+
+    <div class="menu-replica-wrap">
+      <div class="menu-replica">
+
+        <!-- Top member banner -->
+        <div class="mr-member-banner">
+          <span>★ The Shed Insider · Member Menu · Show your status to your server ★</span>
+        </div>
+
+        <!-- Logo block -->
+        <div class="mr-logo-block">
+          <div class="mr-logo-frame">
+            <span class="mr-tiny">in</span>
+            <span class="mr-big">THE</span>
+            <span class="mr-big">SHED</span>
+            <span class="mr-tiny-script">EAT WELL. DRINK.</span>
+          </div>
+          <div class="mr-meta-line">Brunch, Lunch &amp; Dinner · @theshedrestaurant · intheshed.com</div>
+        </div>
+
+        <!-- Two-column body -->
+        <div class="mr-body">
+
+          <!-- LEFT COLUMN: Shed Plates + Salads & Bowls -->
+          <div class="mr-col">
+            <div class="mr-section-head">
+              <span class="mr-rule"></span>
+              <h4 class="mr-section-title">SHED PLATES</h4>
+              <span class="mr-rule"></span>
+            </div>
+
+            <div class="mr-item">
+              <div class="mr-item-row">
+                <div class="mr-item-name">CHICKEN &amp; WAFFLES</div>
+                <div class="mr-item-prices">
+                  <span class="mr-price-old">21<sup>75</sup></span>
+                  <span class="mr-price-arrow">→</span>
+                  <span class="mr-price-member">18<sup>49</sup></span>
+                </div>
+              </div>
+              <div class="mr-item-desc">SPICY HABANERO HONEY ON SIDE</div>
+            </div>
+
+            <div class="mr-item">
+              <div class="mr-item-row">
+                <div class="mr-item-name">SHRIMP &amp; CHIPS</div>
+                <div class="mr-item-prices">
+                  <span class="mr-price-old">28<sup>75</sup></span>
+                  <span class="mr-price-arrow">→</span>
+                  <span class="mr-price-member">24<sup>44</sup></span>
+                </div>
+              </div>
+              <div class="mr-item-desc">CRISPY JUMBO SHRIMP, SHED FRIES, TARTAR SAUCE, COCKTAIL SAUCE, LEMON</div>
+            </div>
+
+            <div class="mr-item">
+              <div class="mr-item-row">
+                <div class="mr-item-name">SPRING CHICKEN</div>
+                <div class="mr-item-prices">
+                  <span class="mr-price-old">22<sup>95</sup></span>
+                  <span class="mr-price-arrow">→</span>
+                  <span class="mr-price-member">19<sup>51</sup></span>
+                </div>
+              </div>
+              <div class="mr-item-desc">GRILLED, GREENS, SWEET PEPPERS, RED ONION, BASIL, LEMON, PARMESAN CRISP <span class="mr-gf">(GF)</span></div>
+            </div>
+
+            <div class="mr-item">
+              <div class="mr-item-row">
+                <div class="mr-item-name">GLAZED SALMON*</div>
+                <div class="mr-item-prices">
+                  <span class="mr-price-old">31<sup>25</sup></span>
+                  <span class="mr-price-arrow">→</span>
+                  <span class="mr-price-member">26<sup>56</sup></span>
+                </div>
+              </div>
+              <div class="mr-item-desc">SPINACH, CORN, PEAS, SHALLOTS, HONEY DIJON <span class="mr-gf">(GF)</span></div>
+            </div>
+
+            <div class="mr-item">
+              <div class="mr-item-row">
+                <div class="mr-item-name">12OZ. SIRLOIN STEAK*</div>
+                <div class="mr-item-prices">
+                  <span class="mr-price-old">38<sup>95</sup></span>
+                  <span class="mr-price-arrow">→</span>
+                  <span class="mr-price-member">33<sup>11</sup></span>
+                </div>
+              </div>
+              <div class="mr-item-desc">SHED FRIES, HOUSEMADE STEAK SAUCE <span class="mr-gf">(GF)</span></div>
+            </div>
+
+            <div class="mr-section-head" style="margin-top: 28px;">
+              <span class="mr-rule"></span>
+              <h4 class="mr-section-title">SALADS &amp; BOWLS</h4>
+              <span class="mr-rule"></span>
+            </div>
+
+            <!-- LOBSTER BOWL - MEMBERS ONLY -->
+            <div class="mr-item mr-exclusive">
+              <div class="mr-item-row">
+                <div class="mr-item-name">LOBSTER BOWL</div>
+              </div>
+              <div class="mr-item-desc">CHILLED MAINE LOBSTER, AVOCADO, ARUGULA, CITRUS VINAIGRETTE, BRIOCHE CROUTON · <strong>YEAR-ROUND ACCESS FOR MEMBERS</strong></div>
+            </div>
+
+            <div class="mr-item">
+              <div class="mr-item-row">
+                <div class="mr-item-name">SHED BOWL</div>
+                <div class="mr-item-prices">
+                  <span class="mr-price-old">20<sup>75</sup></span>
+                  <span class="mr-price-arrow">→</span>
+                  <span class="mr-price-member">17<sup>64</sup></span>
+                </div>
+              </div>
+              <div class="mr-item-desc">ROASTED CHICKEN, ARUGULA, SWEET POTATO, MUSHROOMS, RADISH, GOAT CHEESE, SUNFLOWER SEEDS, WILD RICE, SPICED HONEY VINAIGRETTE <span class="mr-gf">(GF)</span></div>
+            </div>
+
+            <div class="mr-item">
+              <div class="mr-item-row">
+                <div class="mr-item-name">VILLAGE BOWL</div>
+                <div class="mr-item-prices">
+                  <span class="mr-price-old">18<sup>25</sup></span>
+                  <span class="mr-price-arrow">→</span>
+                  <span class="mr-price-member">15<sup>51</sup></span>
+                </div>
+              </div>
+              <div class="mr-item-desc">CABBAGE, GARBANZOS, OLIVE, ONION, CUCUMBER, ROASTED TOMATO, FETA, BASIL BALSAMIC DRESSING <span class="mr-gf">(GF)</span></div>
+            </div>
+
+            <div class="mr-item">
+              <div class="mr-item-row">
+                <div class="mr-item-name">CHOPPED COBB</div>
+                <div class="mr-item-prices">
+                  <span class="mr-price-old">19<sup>75</sup></span>
+                  <span class="mr-price-arrow">→</span>
+                  <span class="mr-price-member">16<sup>79</sup></span>
+                </div>
+              </div>
+              <div class="mr-item-desc">GRILLED CHICKEN, EGG, BACON, BLEU CHEESE, TOMATO, CUCUMBER, CORN, AVOCADO, GREENS, BUTTERMILK DRESSING <span class="mr-gf">(GF)</span></div>
+            </div>
+
+            <div class="mr-item">
+              <div class="mr-item-row">
+                <div class="mr-item-name">CAESAR SALAD</div>
+                <div class="mr-item-prices">
+                  <span class="mr-price-old">16<sup>95</sup></span>
+                  <span class="mr-price-arrow">→</span>
+                  <span class="mr-price-member">14<sup>41</sup></span>
+                </div>
+              </div>
+              <div class="mr-item-desc">ROMAINE, BRIOCHE CROUTON, PARMESAN CRISP</div>
+            </div>
+          </div>
+
+          <!-- RIGHT COLUMN: Burgers & Sandwiches -->
+          <div class="mr-col">
+            <div class="mr-section-head">
+              <span class="mr-rule"></span>
+              <h4 class="mr-section-title">BURGERS &amp; SANDWICHES</h4>
+              <span class="mr-rule"></span>
+            </div>
+            <div class="mr-section-note">BURGERS FRESH GROUND DAILY · COLESLAW &amp; PICKLE · GLUTEN FREE BREAD AVAILABLE · DOUBLE BURGER ADD $6</div>
+
+            <div class="mr-item">
+              <div class="mr-item-row">
+                <div class="mr-item-name">SHED BURGER*</div>
+                <div class="mr-item-prices">
+                  <span class="mr-price-old">17<sup>95</sup></span>
+                  <span class="mr-price-arrow">→</span>
+                  <span class="mr-price-member">15<sup>26</sup></span>
+                </div>
+              </div>
+              <div class="mr-item-desc">AMERICAN, SWISS, LETTUCE, TOMATO, ONION JAM, SHED SAUCE</div>
+            </div>
+
+            <div class="mr-item">
+              <div class="mr-item-row">
+                <div class="mr-item-name">STEAK HOUSE BURGER*</div>
+                <div class="mr-item-prices">
+                  <span class="mr-price-old">17<sup>95</sup></span>
+                  <span class="mr-price-arrow">→</span>
+                  <span class="mr-price-member">15<sup>26</sup></span>
+                </div>
+              </div>
+              <div class="mr-item-desc">BLEU CHEESE, CRISPY ONION, HOUSEMADE STEAK SAUCE</div>
+            </div>
+
+            <div class="mr-item">
+              <div class="mr-item-row">
+                <div class="mr-item-name">BACKYARD BURGER*</div>
+                <div class="mr-item-prices">
+                  <span class="mr-price-old">17<sup>95</sup></span>
+                  <span class="mr-price-arrow">→</span>
+                  <span class="mr-price-member">15<sup>26</sup></span>
+                </div>
+              </div>
+              <div class="mr-item-desc">APPLEWOOD SMOKED BACON, CHEDDAR, COLESLAW, HOUSE BBQ</div>
+            </div>
+
+            <div class="mr-item">
+              <div class="mr-item-row">
+                <div class="mr-item-name">REUBEN</div>
+                <div class="mr-item-prices">
+                  <span class="mr-price-old">19<sup>50</sup></span>
+                  <span class="mr-price-arrow">→</span>
+                  <span class="mr-price-member">16<sup>58</sup></span>
+                </div>
+              </div>
+              <div class="mr-item-desc">CORNED BEEF, SWISS CHEESE, SAUERKRAUT, SHED SAUCE, RYE</div>
+            </div>
+
+            <div class="mr-item">
+              <div class="mr-item-row">
+                <div class="mr-item-name">CHICKEN SANDWICH</div>
+                <div class="mr-item-prices">
+                  <span class="mr-price-old">18<sup>95</sup></span>
+                  <span class="mr-price-arrow">→</span>
+                  <span class="mr-price-member">16<sup>11</sup></span>
+                </div>
+              </div>
+              <div class="mr-item-desc">SPICY HOT HONEY FRIED, PICKLE, BUTTERMILK DRESSING</div>
+            </div>
+
+            <!-- SHED FRIES - HOOK ITEM -->
+            <div class="mr-item mr-free">
+              <div class="mr-item-row">
+                <div class="mr-item-name">SHED FRIES + SHED SAUCE</div>
+                <div class="mr-item-prices">
+                  <span class="mr-price-old">8<sup>95</sup></span>
+                  <span class="mr-price-arrow">→</span>
+                  <span class="mr-price-free">FREE</span>
+                </div>
+              </div>
+              <div class="mr-item-desc">CRISPY HAND-CUT FRIES WITH OUR SIGNATURE SHED SAUCE · ONE PER TABLE, EVERY VISIT</div>
+            </div>
+
+            <div class="mr-item">
+              <div class="mr-item-row">
+                <div class="mr-item-name">FISH SANDWICH</div>
+                <div class="mr-item-prices">
+                  <span class="mr-price-old">17<sup>10</sup></span>
+                  <span class="mr-price-arrow">→</span>
+                  <span class="mr-price-member">14<sup>54</sup></span>
+                </div>
+              </div>
+              <div class="mr-item-desc">BLACKENED SEA BASS, CUCUMBER SLAW, CHIPOTLE MAYO</div>
+            </div>
+
+            <div class="mr-item">
+              <div class="mr-item-row">
+                <div class="mr-item-name">ROAST BEEF MELT</div>
+                <div class="mr-item-prices">
+                  <span class="mr-price-old">19<sup>50</sup></span>
+                  <span class="mr-price-arrow">→</span>
+                  <span class="mr-price-member">16<sup>58</sup></span>
+                </div>
+              </div>
+              <div class="mr-item-desc">HOT-DIPPED, CHEDDAR, CRISPY ONION, HORSERADISH CREAM</div>
+            </div>
+          </div>
+
+        </div>
+
+        <!-- Footer with mason jar + script + QR -->
+        <div class="mr-footer-strip">
+
+          <!-- Mason jar illustration -->
+          <svg class="mr-mason-jar" viewBox="0 0 60 76" xmlns="http://www.w3.org/2000/svg" fill="none" stroke="#1a1a1a" stroke-width="1.4">
+            <rect x="14" y="6" width="32" height="6" rx="1"/>
+            <rect x="16" y="12" width="28" height="3"/>
+            <line x1="16" y1="14" x2="44" y2="14" stroke-width="0.7"/>
+            <path d="M 12 16 L 12 66 Q 12 72 18 72 L 42 72 Q 48 72 48 66 L 48 16 Z"/>
+            <rect x="20" y="40" width="20" height="14" stroke-width="1"/>
+            <text x="30" y="46" text-anchor="middle" font-size="3.5" font-weight="700" fill="#1a1a1a" stroke="none" font-family="Outfit">.THE</text>
+            <text x="30" y="51" text-anchor="middle" font-size="3.5" font-weight="700" fill="#1a1a1a" stroke="none" font-family="Outfit">SHED</text>
+            <line x1="33" y1="6" x2="38" y2="36"/>
+            <line x1="33" y1="6" x2="29" y2="2"/>
+            <circle cx="20" cy="22" r="4" stroke-width="1"/>
+            <line x1="16" y1="22" x2="24" y2="22" stroke-width="0.6"/>
+            <line x1="20" y1="18" x2="20" y2="26" stroke-width="0.6"/>
+          </svg>
+
+          <!-- Hand-drawn script -->
+          <div class="mr-footer-script">show your member status to your server →</div>
+
+          <!-- QR section -->
+          <div class="mr-qr-section">
+            <div class="mr-qr-box">
+              <svg viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg">
+                <rect width="64" height="64" fill="white"/>
+                <g fill="black">
+                  <rect x="4" y="4" width="14" height="14"/>
+                  <rect x="6" y="6" width="10" height="10" fill="white"/>
+                  <rect x="8" y="8" width="6" height="6"/>
+                  <rect x="46" y="4" width="14" height="14"/>
+                  <rect x="48" y="6" width="10" height="10" fill="white"/>
+                  <rect x="50" y="8" width="6" height="6"/>
+                  <rect x="4" y="46" width="14" height="14"/>
+                  <rect x="6" y="48" width="10" height="10" fill="white"/>
+                  <rect x="8" y="50" width="6" height="6"/>
+                  <rect x="22" y="4" width="2" height="2"/><rect x="26" y="4" width="2" height="2"/>
+                  <rect x="30" y="4" width="2" height="2"/><rect x="36" y="4" width="2" height="2"/>
+                  <rect x="42" y="4" width="2" height="2"/><rect x="22" y="8" width="2" height="2"/>
+                  <rect x="28" y="8" width="2" height="2"/><rect x="34" y="8" width="2" height="2"/>
+                  <rect x="38" y="8" width="2" height="2"/><rect x="42" y="8" width="2" height="2"/>
+                  <rect x="20" y="12" width="2" height="2"/><rect x="24" y="12" width="2" height="2"/>
+                  <rect x="32" y="12" width="2" height="2"/><rect x="36" y="12" width="2" height="2"/>
+                  <rect x="40" y="12" width="2" height="2"/><rect x="22" y="16" width="2" height="2"/>
+                  <rect x="26" y="16" width="2" height="2"/><rect x="30" y="16" width="2" height="2"/>
+                  <rect x="34" y="16" width="2" height="2"/><rect x="42" y="16" width="2" height="2"/>
+                  <rect x="4" y="22" width="2" height="2"/><rect x="10" y="22" width="2" height="2"/>
+                  <rect x="14" y="22" width="2" height="2"/><rect x="18" y="22" width="2" height="2"/>
+                  <rect x="24" y="22" width="2" height="2"/><rect x="28" y="22" width="2" height="2"/>
+                  <rect x="32" y="22" width="2" height="2"/><rect x="38" y="22" width="2" height="2"/>
+                  <rect x="44" y="22" width="2" height="2"/><rect x="48" y="22" width="2" height="2"/>
+                  <rect x="54" y="22" width="2" height="2"/><rect x="58" y="22" width="2" height="2"/>
+                  <rect x="6" y="26" width="2" height="2"/><rect x="12" y="26" width="2" height="2"/>
+                  <rect x="20" y="26" width="2" height="2"/><rect x="26" y="26" width="2" height="2"/>
+                  <rect x="30" y="26" width="2" height="2"/><rect x="36" y="26" width="2" height="2"/>
+                  <rect x="40" y="26" width="2" height="2"/><rect x="46" y="26" width="2" height="2"/>
+                  <rect x="52" y="26" width="2" height="2"/><rect x="58" y="26" width="2" height="2"/>
+                  <rect x="4" y="30" width="2" height="2"/><rect x="8" y="30" width="2" height="2"/>
+                  <rect x="14" y="30" width="2" height="2"/><rect x="22" y="30" width="2" height="2"/>
+                  <rect x="28" y="30" width="2" height="2"/><rect x="34" y="30" width="2" height="2"/>
+                  <rect x="42" y="30" width="2" height="2"/><rect x="48" y="30" width="2" height="2"/>
+                  <rect x="54" y="30" width="2" height="2"/><rect x="10" y="34" width="2" height="2"/>
+                  <rect x="16" y="34" width="2" height="2"/><rect x="20" y="34" width="2" height="2"/>
+                  <rect x="26" y="34" width="2" height="2"/><rect x="32" y="34" width="2" height="2"/>
+                  <rect x="38" y="34" width="2" height="2"/><rect x="44" y="34" width="2" height="2"/>
+                  <rect x="50" y="34" width="2" height="2"/><rect x="56" y="34" width="2" height="2"/>
+                  <rect x="6" y="38" width="2" height="2"/><rect x="14" y="38" width="2" height="2"/>
+                  <rect x="22" y="38" width="2" height="2"/><rect x="30" y="38" width="2" height="2"/>
+                  <rect x="36" y="38" width="2" height="2"/><rect x="40" y="38" width="2" height="2"/>
+                  <rect x="46" y="38" width="2" height="2"/><rect x="52" y="38" width="2" height="2"/>
+                  <rect x="58" y="38" width="2" height="2"/><rect x="22" y="46" width="2" height="2"/>
+                  <rect x="28" y="46" width="2" height="2"/><rect x="34" y="46" width="2" height="2"/>
+                  <rect x="40" y="46" width="2" height="2"/><rect x="46" y="46" width="2" height="2"/>
+                  <rect x="52" y="46" width="2" height="2"/><rect x="58" y="46" width="2" height="2"/>
+                  <rect x="24" y="50" width="2" height="2"/><rect x="30" y="50" width="2" height="2"/>
+                  <rect x="38" y="50" width="2" height="2"/><rect x="44" y="50" width="2" height="2"/>
+                  <rect x="50" y="50" width="2" height="2"/><rect x="56" y="50" width="2" height="2"/>
+                  <rect x="22" y="54" width="2" height="2"/><rect x="26" y="54" width="2" height="2"/>
+                  <rect x="32" y="54" width="2" height="2"/><rect x="36" y="54" width="2" height="2"/>
+                  <rect x="42" y="54" width="2" height="2"/><rect x="48" y="54" width="2" height="2"/>
+                  <rect x="54" y="54" width="2" height="2"/><rect x="20" y="58" width="2" height="2"/>
+                  <rect x="28" y="58" width="2" height="2"/><rect x="34" y="58" width="2" height="2"/>
+                  <rect x="40" y="58" width="2" height="2"/><rect x="46" y="58" width="2" height="2"/>
+                  <rect x="52" y="58" width="2" height="2"/><rect x="58" y="58" width="2" height="2"/>
+                </g>
+              </svg>
+            </div>
+            <div class="mr-qr-text">
+              <strong>Become a Member</strong>
+              Scan to join in 60s
+              <span class="mr-qr-price">$39 / month</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Legal -->
+        <div class="mr-legal">
+          Before placing your order, please inform your server if a person in your party has a food allergy.<br>
+          * This item may be cooked to your liking. Serving raw or undercooked meats, poultry, seafood, shellfish, or eggs may increase your risk of food-borne illness.
+        </div>
+
       </div>
     </div>
 
@@ -2283,5 +3054,10 @@
 
 </div>
 
+
+<script>
+function toggleTheme(){var h=document.documentElement,c=h.getAttribute('data-theme');h.setAttribute('data-theme',c==='dark'?'light':'dark');localStorage.setItem('theme',c==='dark'?'light':'dark')}
+(function(){var t=localStorage.getItem('theme');if(t)document.documentElement.setAttribute('data-theme',t)})();
+</script>
 </body>
 </html>
