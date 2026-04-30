@@ -1367,16 +1367,15 @@
     font-weight: 700;
     font-size: 13px;
     color: #999;
-    text-decoration: line-through;
-    text-decoration-thickness: 1.5px;
+    
   }
 
   .mr-price-old sup { font-size: 8px; vertical-align: super; }
 
   .mr-price-arrow {
     font-size: 11px;
-    color: #1a3329;
-    font-weight: 600;
+    color: #ccc;
+    font-weight: 300;
   }
 
   .mr-price-member {
@@ -1406,22 +1405,21 @@
 
   /* Free hook item */
   .mr-item.mr-free {
-    background: #1a3329;
-    color: #F2EBD3;
-    padding: 16px 18px 14px;
+    border: 1.5px dashed #1a3329;
+    padding: 14px 16px 12px;
     border-radius: 6px;
-    margin: 8px 0 18px;
-    box-shadow: 0 8px 20px -8px rgba(26, 51, 41, 0.4);
+    margin: 8px 0 16px;
+    background: rgba(26, 51, 41, 0.04);
     position: relative;
   }
 
   .mr-item.mr-free::before {
-    content: '★ FREE FOR MEMBERS · EVERY VISIT';
+    content: '★ COMPLIMENTARY · EVERY VISIT';
     position: absolute;
     top: -9px;
-    left: 14px;
-    background: #d4a017;
-    color: #1a1a1a;
+    left: 12px;
+    background: #1a3329;
+    color: #d4a017;
     font-size: 9px;
     font-weight: 800;
     padding: 2px 10px;
@@ -1429,20 +1427,20 @@
     letter-spacing: 0.1em;
   }
 
-  .mr-item.mr-free .mr-item-name { color: #F2EBD3; margin-top: 4px; }
-  .mr-item.mr-free .mr-item-desc { color: rgba(242, 235, 211, 0.7); }
+  .mr-item.mr-free .mr-item-name { margin-top: 4px; }
+  .mr-item.mr-free .mr-item-desc { color: #888; }
   .mr-item.mr-free .mr-price-old {
-    color: rgba(242, 235, 211, 0.55);
+    color: #999;
   }
-  .mr-item.mr-free .mr-price-arrow { color: #34D399; }
+  .mr-item.mr-free .mr-price-arrow { color: #ccc; }
   .mr-item.mr-free .mr-price-free {
-    background: #34D399;
+    background: rgba(26, 51, 41, 0.1);
     color: #1a3329;
-    padding: 3px 10px;
+    padding: 2px 8px;
     border-radius: 3px;
-    font-size: 12px;
-    font-weight: 800;
-    letter-spacing: 0.08em;
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 0.04em;
   }
 
   /* Members-only exclusive */
@@ -2182,10 +2180,7 @@
     <div class="menu-replica-wrap">
       <div class="menu-replica">
 
-        <!-- Top member banner -->
-        <div class="mr-member-banner">
-          <span>★ The Shed Insider · Member Menu · Show your status to your server ★</span>
-        </div>
+
 
         <!-- Logo block -->
         <div class="mr-logo-block">
@@ -2196,6 +2191,12 @@
             <span class="mr-tiny-script">EAT WELL. DRINK.</span>
           </div>
           <div class="mr-meta-line">Brunch, Lunch &amp; Dinner · @theshedrestaurant · intheshed.com</div>
+        </div>
+
+        <!-- Price Key -->
+        <div style="display:flex;align-items:center;justify-content:center;gap:24px;padding:10px 20px;margin:0 auto 16px;max-width:360px;border:1px solid #ddd;border-radius:6px;font-size:11px;color:#666">
+          <div style="display:flex;align-items:center;gap:6px"><span style="color:#999;font-weight:700;font-size:12px">$00</span> Non-member price</div>
+          <div style="display:flex;align-items:center;gap:6px"><span style="background:rgba(26,51,41,0.08);padding:1px 6px;border-radius:3px;font-weight:800;font-size:12px;color:#1a3329">$00</span> Member price</div>
         </div>
 
         <!-- Two-column body -->
@@ -2214,7 +2215,7 @@
                 <div class="mr-item-name">CHICKEN &amp; WAFFLES</div>
                 <div class="mr-item-prices">
                   <span class="mr-price-old">21<sup>75</sup></span>
-                  <span class="mr-price-arrow">→</span>
+                  <span class="mr-price-arrow">|</span>
                   <span class="mr-price-member">18<sup>49</sup></span>
                 </div>
               </div>
@@ -2226,7 +2227,7 @@
                 <div class="mr-item-name">SHRIMP &amp; CHIPS</div>
                 <div class="mr-item-prices">
                   <span class="mr-price-old">28<sup>75</sup></span>
-                  <span class="mr-price-arrow">→</span>
+                  <span class="mr-price-arrow">|</span>
                   <span class="mr-price-member">24<sup>44</sup></span>
                 </div>
               </div>
@@ -2238,7 +2239,7 @@
                 <div class="mr-item-name">SPRING CHICKEN</div>
                 <div class="mr-item-prices">
                   <span class="mr-price-old">22<sup>95</sup></span>
-                  <span class="mr-price-arrow">→</span>
+                  <span class="mr-price-arrow">|</span>
                   <span class="mr-price-member">19<sup>51</sup></span>
                 </div>
               </div>
@@ -2250,7 +2251,7 @@
                 <div class="mr-item-name">GLAZED SALMON*</div>
                 <div class="mr-item-prices">
                   <span class="mr-price-old">31<sup>25</sup></span>
-                  <span class="mr-price-arrow">→</span>
+                  <span class="mr-price-arrow">|</span>
                   <span class="mr-price-member">26<sup>56</sup></span>
                 </div>
               </div>
@@ -2262,7 +2263,7 @@
                 <div class="mr-item-name">12OZ. SIRLOIN STEAK*</div>
                 <div class="mr-item-prices">
                   <span class="mr-price-old">38<sup>95</sup></span>
-                  <span class="mr-price-arrow">→</span>
+                  <span class="mr-price-arrow">|</span>
                   <span class="mr-price-member">33<sup>11</sup></span>
                 </div>
               </div>
@@ -2279,6 +2280,11 @@
             <div class="mr-item mr-exclusive">
               <div class="mr-item-row">
                 <div class="mr-item-name">LOBSTER BOWL</div>
+                <div class="mr-item-prices">
+                  <span class="mr-price-old">34<sup>95</sup></span>
+                  <span class="mr-price-arrow">|</span>
+                  <span class="mr-price-member">29<sup>71</sup></span>
+                </div>
               </div>
               <div class="mr-item-desc">CHILLED MAINE LOBSTER, AVOCADO, ARUGULA, CITRUS VINAIGRETTE, BRIOCHE CROUTON · <strong>YEAR-ROUND ACCESS FOR MEMBERS</strong></div>
             </div>
@@ -2288,7 +2294,7 @@
                 <div class="mr-item-name">SHED BOWL</div>
                 <div class="mr-item-prices">
                   <span class="mr-price-old">20<sup>75</sup></span>
-                  <span class="mr-price-arrow">→</span>
+                  <span class="mr-price-arrow">|</span>
                   <span class="mr-price-member">17<sup>64</sup></span>
                 </div>
               </div>
@@ -2300,7 +2306,7 @@
                 <div class="mr-item-name">VILLAGE BOWL</div>
                 <div class="mr-item-prices">
                   <span class="mr-price-old">18<sup>25</sup></span>
-                  <span class="mr-price-arrow">→</span>
+                  <span class="mr-price-arrow">|</span>
                   <span class="mr-price-member">15<sup>51</sup></span>
                 </div>
               </div>
@@ -2312,7 +2318,7 @@
                 <div class="mr-item-name">CHOPPED COBB</div>
                 <div class="mr-item-prices">
                   <span class="mr-price-old">19<sup>75</sup></span>
-                  <span class="mr-price-arrow">→</span>
+                  <span class="mr-price-arrow">|</span>
                   <span class="mr-price-member">16<sup>79</sup></span>
                 </div>
               </div>
@@ -2324,7 +2330,7 @@
                 <div class="mr-item-name">CAESAR SALAD</div>
                 <div class="mr-item-prices">
                   <span class="mr-price-old">16<sup>95</sup></span>
-                  <span class="mr-price-arrow">→</span>
+                  <span class="mr-price-arrow">|</span>
                   <span class="mr-price-member">14<sup>41</sup></span>
                 </div>
               </div>
@@ -2346,7 +2352,7 @@
                 <div class="mr-item-name">SHED BURGER*</div>
                 <div class="mr-item-prices">
                   <span class="mr-price-old">17<sup>95</sup></span>
-                  <span class="mr-price-arrow">→</span>
+                  <span class="mr-price-arrow">|</span>
                   <span class="mr-price-member">15<sup>26</sup></span>
                 </div>
               </div>
@@ -2358,7 +2364,7 @@
                 <div class="mr-item-name">STEAK HOUSE BURGER*</div>
                 <div class="mr-item-prices">
                   <span class="mr-price-old">17<sup>95</sup></span>
-                  <span class="mr-price-arrow">→</span>
+                  <span class="mr-price-arrow">|</span>
                   <span class="mr-price-member">15<sup>26</sup></span>
                 </div>
               </div>
@@ -2370,7 +2376,7 @@
                 <div class="mr-item-name">BACKYARD BURGER*</div>
                 <div class="mr-item-prices">
                   <span class="mr-price-old">17<sup>95</sup></span>
-                  <span class="mr-price-arrow">→</span>
+                  <span class="mr-price-arrow">|</span>
                   <span class="mr-price-member">15<sup>26</sup></span>
                 </div>
               </div>
@@ -2382,7 +2388,7 @@
                 <div class="mr-item-name">REUBEN</div>
                 <div class="mr-item-prices">
                   <span class="mr-price-old">19<sup>50</sup></span>
-                  <span class="mr-price-arrow">→</span>
+                  <span class="mr-price-arrow">|</span>
                   <span class="mr-price-member">16<sup>58</sup></span>
                 </div>
               </div>
@@ -2394,7 +2400,7 @@
                 <div class="mr-item-name">CHICKEN SANDWICH</div>
                 <div class="mr-item-prices">
                   <span class="mr-price-old">18<sup>95</sup></span>
-                  <span class="mr-price-arrow">→</span>
+                  <span class="mr-price-arrow">|</span>
                   <span class="mr-price-member">16<sup>11</sup></span>
                 </div>
               </div>
@@ -2407,7 +2413,7 @@
                 <div class="mr-item-name">SHED FRIES + SHED SAUCE</div>
                 <div class="mr-item-prices">
                   <span class="mr-price-old">8<sup>95</sup></span>
-                  <span class="mr-price-arrow">→</span>
+                  <span class="mr-price-arrow">|</span>
                   <span class="mr-price-free">FREE</span>
                 </div>
               </div>
@@ -2419,7 +2425,7 @@
                 <div class="mr-item-name">FISH SANDWICH</div>
                 <div class="mr-item-prices">
                   <span class="mr-price-old">17<sup>10</sup></span>
-                  <span class="mr-price-arrow">→</span>
+                  <span class="mr-price-arrow">|</span>
                   <span class="mr-price-member">14<sup>54</sup></span>
                 </div>
               </div>
@@ -2431,7 +2437,7 @@
                 <div class="mr-item-name">ROAST BEEF MELT</div>
                 <div class="mr-item-prices">
                   <span class="mr-price-old">19<sup>50</sup></span>
-                  <span class="mr-price-arrow">→</span>
+                  <span class="mr-price-arrow">|</span>
                   <span class="mr-price-member">16<sup>58</sup></span>
                 </div>
               </div>
@@ -2461,7 +2467,7 @@
           </svg>
 
           <!-- Hand-drawn script -->
-          <div class="mr-footer-script">show your member status to your server →</div>
+          
 
           <!-- QR section -->
           <div class="mr-qr-section">
@@ -2531,8 +2537,6 @@
             </div>
             <div class="mr-qr-text">
               <strong>Become a Member</strong>
-              Scan to join in 60s
-              <span class="mr-qr-price">$39 / month</span>
             </div>
           </div>
         </div>
